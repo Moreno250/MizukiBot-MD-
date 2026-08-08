@@ -1,0 +1,28 @@
+{
+  "antipv2": false,
+  "antipv3": false,
+  "menu_audio": true,
+  "verificado": false,
+  "consoleoff": true,
+  "antipv": false,
+  "anticall": false,
+  "visualizarmsg": true,
+  "listanegraG": [
+    "258856680190@s.whatsapp.net"
+  ],
+  "cmdpremium": [
+    "gethtml"
+  ],
+  "TOKEN_GPT": [],
+  "msgantipv2": "Não pode mandar mensagem para o bot, ele está programado para não responder, tente falar com meu dono",
+  "isRecolherLink": true,
+  "dono1": "5527992870575",
+  "dono2": "556199452750",
+  "dono3": ".",
+  "dono4": "558481625194",
+  "dono5": ".",
+  "dono6": "556182012213",
+  "botoff": false,
+  "rg_aluguelGB": false,
+  "numero_dono2": "556199452750"
+}

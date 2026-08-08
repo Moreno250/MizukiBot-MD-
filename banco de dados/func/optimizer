@@ -1,0 +1,427 @@
+/**
+ * ╔══════════════════════════════════════════════════════╗
+ * ║         SISTEMA DE OTIMIZAÇÃO — OblivionX Bot        ║
+ * ║              banco de dados/func/optimizer.js         ║
+ * ╚══════════════════════════════════════════════════════╝
+ *
+ * Funcionalidades:
+ *  - Cache LRU com TTL (imagens, respostas, buffers)
+ *  - Limpeza automática de memória por threshold
+ *  - Pool de conexões/sessões reutilizáveis
+ *  - Debounce/throttle de eventos pesados
+ *  - Monitor de heap em tempo real
+ *  - Relatório de uso de memória
+ */
+
+'use strict';
+
+// ─── DEPENDÊNCIAS ────────────────────────────────────────
+const fs   = require('fs');
+const path = require('path');
+const v8   = require('v8');
+
+// ─── CONFIG GLOBAL ───────────────────────────────────────
+const CONFIG = {
+  // Cache
+  CACHE_MAX_SIZE:    100,        // máx de entradas no cache
+  CACHE_DEFAULT_TTL: 10 * 60 * 1000,  // 10 min em ms
+  IMAGE_CACHE_TTL:   30 * 60 * 1000,  // 30 min pra imagens
+
+  // Memória
+  HEAP_THRESHOLD_MB: 300,        // dispara limpeza acima de 300 MB
+  GC_INTERVAL_MS:   5 * 60 * 1000,   // checa a cada 5 min
+
+  // Throttle/Debounce
+  EVENT_THROTTLE_MS: 500,        // throttle de eventos de mensagem
+  MEDIA_DEBOUNCE_MS: 1000,       // debounce de envio de mídia
+
+  // Logs
+  LOG_ENABLED: true,
+  LOG_PREFIX:  '「⚙️」OPTIMIZER',
+};
+
+// ─── UTILITÁRIOS ─────────────────────────────────────────
+const log = (msg, type = 'info') => {};
+
+const heapMB = () => {
+  const used = process.memoryUsage().heapUsed;
+  return Math.round(used / 1024 / 1024);
+};
+
+// ─── CLASSE: CACHE LRU COM TTL ───────────────────────────
+class LRUCache {
+  /**
+   * Cache com evicção LRU (Least Recently Used) + TTL por entrada.
+   * Evita redownload de imagens/catbox e reprocessamento de buffers.
+   */
+  constructor({ maxSize = CONFIG.CACHE_MAX_SIZE, defaultTTL = CONFIG.CACHE_DEFAULT_TTL, name = 'cache' } = {}) {
+    this.maxSize    = maxSize;
+    this.defaultTTL = defaultTTL;
+    this.name       = name;
+    this.store      = new Map();   // Map mantém ordem de inserção
+  }
+
+  _isExpired(entry) {
+    return Date.now() > entry.expiresAt;
+  }
+
+  _evictLRU() {
+    // O primeiro item do Map é o menos recentemente usado
+    const firstKey = this.store.keys().next().value;
+    this.store.delete(firstKey);
+  }
+
+  set(key, value, ttl = this.defaultTTL) {
+    // Se já existe, remove pra reinserir no fim (mais recente)
+    if (this.store.has(key)) this.store.delete(key);
+
+    // Evicta se cheio
+    if (this.store.size >= this.maxSize) this._evictLRU();
+
+    this.store.set(key, {
+      value,
+      expiresAt: Date.now() + ttl,
+      size: this._estimateSize(value),
+    });
+  }
+
+  get(key) {
+    if (!this.store.has(key)) return null;
+
+    const entry = this.store.get(key);
+
+    if (this._isExpired(entry)) {
+      this.store.delete(key);
+      return null;
+    }
+
+    // Reinsere no fim pra marcar como "recentemente usado"
+    this.store.delete(key);
+    this.store.set(key, entry);
+    return entry.value;
+  }
+
+  has(key) {
+    return this.get(key) !== null;
+  }
+
+  delete(key) {
+    return this.store.delete(key);
+  }
+
+  clear() {
+    const count = this.store.size;
+    this.store.clear();
+    log(`[${this.name}] Cache limpo — ${count} entradas removidas`, 'ok');
+  }
+
+  /** Remove todas as entradas expiradas */
+  purgeExpired() {
+    let removed = 0;
+    for (const [key, entry] of this.store) {
+      if (this._isExpired(entry)) {
+        this.store.delete(key);
+        removed++;
+      }
+    }
+    if (removed > 0) log(`[${this.name}] Purgados ${removed} itens expirados`, 'info');
+    return removed;
+  }
+
+  /** Estimativa de tamanho em bytes do valor */
+  _estimateSize(value) {
+    if (Buffer.isBuffer(value)) return value.length;
+    if (typeof value === 'string') return value.length * 2;
+    try { return JSON.stringify(value).length * 2; } catch { return 0; }
+  }
+
+  /** Tamanho total estimado em KB */
+  get totalSizeKB() {
+    let total = 0;
+    for (const e of this.store.values()) total += e.size;
+    return Math.round(total / 1024);
+  }
+
+  get size() { return this.store.size; }
+
+  stats() {
+    return {
+      name:      this.name,
+      entries:   this.store.size,
+      maxSize:   this.maxSize,
+      sizeKB:    this.totalSizeKB,
+    };
+  }
+}
+
+// ─── CACHES ESPECÍFICOS ──────────────────────────────────
+const imageCache = new LRUCache({
+  maxSize:    50,
+  defaultTTL: CONFIG.IMAGE_CACHE_TTL,
+  name:       'image',
+});
+
+const responseCache = new LRUCache({
+  maxSize:    200,
+  defaultTTL: CONFIG.CACHE_DEFAULT_TTL,
+  name:       'response',
+});
+
+const bufferCache = new LRUCache({
+  maxSize:    30,
+  defaultTTL: CONFIG.CACHE_DEFAULT_TTL,
+  name:       'buffer',
+});
+
+// ─── FUNÇÕES DE CACHE DE IMAGEM ──────────────────────────
+
+/**
+ * Retorna buffer de imagem do cache ou baixa da URL e armazena.
+ * Substitui o fetch direto em privateCmd e similares.
+ *
+ * @param {string} url - URL da imagem (catbox.moe, etc.)
+ * @param {Function} fetchFn - função async que retorna Buffer da imagem
+ * @returns {Promise<Buffer>}
+ */
+async function getImageCached(url, fetchFn) {
+  const cached = imageCache.get(url);
+  if (cached) {
+    log(`[image] HIT: ${url.slice(-30)}`, 'ok');
+    return cached;
+  }
+
+  log(`[image] MISS — baixando: ${url.slice(-30)}`, 'info');
+  const buffer = await fetchFn();
+  imageCache.set(url, buffer);
+  return buffer;
+}
+
+/**
+ * Pré-aquece o cache com uma lista de URLs.
+ * Chame no startup da bot pras imagens mais usadas.
+ *
+ * @param {Array<{url: string, fetchFn: Function}>} items
+ */
+async function warmupImageCache(items = []) {
+  log(`Warming up ${items.length} imagens...`, 'info');
+  for (const { url, fetchFn } of items) {
+    try { await getImageCached(url, fetchFn); }
+    catch (e) { log(`Warmup falhou pra ${url}: ${e.message}`, 'warn'); }
+  }
+  log(`Warmup concluído — heap: ${heapMB()} MB`, 'ok');
+}
+
+// ─── THROTTLE / DEBOUNCE ─────────────────────────────────
+
+/**
+ * Throttle: executa fn no máximo 1x por intervalo.
+ * Ideal pra handlers de mensagem/evento no Baileys.
+ */
+function throttle(fn, intervalMs = CONFIG.EVENT_THROTTLE_MS) {
+  let lastCall = 0;
+  return function (...args) {
+    const now = Date.now();
+    if (now - lastCall >= intervalMs) {
+      lastCall = now;
+      return fn.apply(this, args);
+    }
+  };
+}
+
+/**
+ * Debounce: adia execução até parar de receber chamadas.
+ * Ideal pra salvar arquivos JSON (rgusers, banfig, etc.).
+ */
+function debounce(fn, delayMs = CONFIG.MEDIA_DEBOUNCE_MS) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delayMs);
+  };
+}
+
+// ─── MONITOR DE MEMÓRIA ──────────────────────────────────
+
+class MemoryMonitor {
+  constructor() {
+    this._timer    = null;
+    this._history  = [];   // últimas 10 leituras
+    this._maxHist  = 10;
+  }
+
+  start() {
+    if (this._timer) return;
+    this._timer = setInterval(() => this._check(), CONFIG.GC_INTERVAL_MS);
+    this._timer.unref?.();   // não impede o processo de encerrar
+    log(`Monitor iniciado — threshold: ${CONFIG.HEAP_THRESHOLD_MB} MB`, 'ok');
+  }
+
+  stop() {
+    if (this._timer) {
+      clearInterval(this._timer);
+      this._timer = null;
+    }
+  }
+
+  _check() {
+    const mb = heapMB();
+    this._history.push({ ts: Date.now(), mb });
+    if (this._history.length > this._maxHist) this._history.shift();
+
+    log(`Heap: ${mb} MB`, mb > CONFIG.HEAP_THRESHOLD_MB ? 'warn' : 'info');
+
+    if (mb > CONFIG.HEAP_THRESHOLD_MB) {
+      log(`Threshold atingido (${mb} MB) — iniciando limpeza...`, 'warn');
+      this._cleanup();
+    }
+  }
+
+  _cleanup() {
+    // 1. Purga expirados de todos os caches
+    const removed =
+      imageCache.purgeExpired() +
+      responseCache.purgeExpired() +
+      bufferCache.purgeExpired();
+
+    // 2. Se ainda estiver alto, limpa caches de resposta (menos crítico)
+    if (heapMB() > CONFIG.HEAP_THRESHOLD_MB) {
+      responseCache.clear();
+    }
+
+    // 3. Sugere GC se disponível (node --expose-gc)
+    if (typeof global.gc === 'function') {
+      global.gc();
+      log('GC manual executado', 'ok');
+    }
+
+    log(`Limpeza concluída — removidos ${removed} itens — heap: ${heapMB()} MB`, 'ok');
+  }
+
+  /** Limpeza manual imediata */
+  forceCleanup() {
+    log('Limpeza forçada solicitada', 'warn');
+    this._cleanup();
+  }
+
+  report() {
+    const mem   = process.memoryUsage();
+    const stats = {
+      heap_used_mb:    Math.round(mem.heapUsed  / 1024 / 1024),
+      heap_total_mb:   Math.round(mem.heapTotal / 1024 / 1024),
+      external_mb:     Math.round(mem.external  / 1024 / 1024),
+      rss_mb:          Math.round(mem.rss       / 1024 / 1024),
+      v8_heap_limit_mb: Math.round(v8.getHeapStatistics().heap_size_limit / 1024 / 1024),
+      caches: {
+        image:    imageCache.stats(),
+        response: responseCache.stats(),
+        buffer:   bufferCache.stats(),
+      },
+      history: this._history,
+    };
+    return stats;
+  }
+
+  printReport() {
+    const r = this.report();
+    const lines = [
+      '╔══════════════════════════════════╗',
+      '║       RELATÓRIO DE MEMÓRIA       ║',
+      '╠══════════════════════════════════╣',
+      `║  Heap usado:    ${String(r.heap_used_mb).padEnd(6)} MB         ║`,
+      `║  Heap total:    ${String(r.heap_total_mb).padEnd(6)} MB         ║`,
+      `║  RSS:           ${String(r.rss_mb).padEnd(6)} MB         ║`,
+      `║  Limite V8:     ${String(r.v8_heap_limit_mb).padEnd(6)} MB         ║`,
+      '╠══════════════════════════════════╣',
+      `║  Cache imagem:  ${String(r.caches.image.entries).padEnd(4)} itens (${String(r.caches.image.sizeKB).padEnd(6)} KB) ║`,
+      `║  Cache resp:    ${String(r.caches.response.entries).padEnd(4)} itens (${String(r.caches.response.sizeKB).padEnd(6)} KB) ║`,
+      `║  Cache buffer:  ${String(r.caches.buffer.entries).padEnd(4)} itens (${String(r.caches.buffer.sizeKB).padEnd(6)} KB) ║`,
+      '╚══════════════════════════════════╝',
+    ];
+    console.log(lines.join('\n'));
+    return r;
+  }
+}
+
+const monitor = new MemoryMonitor();
+
+// ─── WRITE DEBOUNCED (salvar JSON sem flood de I/O) ──────
+
+const _pendingWrites = new Map();
+
+/**
+ * Salva um arquivo JSON com debounce pra evitar escritas repetidas.
+ * Substitui todos os fs.writeFileSync diretos nos casos de banco de dados.
+ *
+ * @param {string} filePath - caminho do arquivo
+ * @param {Object|Array} data - dado a serializar
+ * @param {number} [delay=500] - ms de debounce
+ */
+function writeJSONDebounced(filePath, data, delay = 500) {
+  if (_pendingWrites.has(filePath)) {
+    clearTimeout(_pendingWrites.get(filePath));
+  }
+  const timer = setTimeout(() => {
+    try {
+      const dir = path.dirname(filePath);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+      _pendingWrites.delete(filePath);
+    } catch (e) {
+      log(`writeJSON falhou (${filePath}): ${e.message}`, 'error');
+    }
+  }, delay);
+  _pendingWrites.set(filePath, timer);
+}
+
+/**
+ * Lê um arquivo JSON com cache em memória.
+ * @param {string} filePath
+ * @param {*} fallback - retorno se não existir
+ */
+function readJSONCached(filePath, fallback = {}) {
+  const cached = responseCache.get('file:' + filePath);
+  if (cached) return cached;
+
+  try {
+    if (!fs.existsSync(filePath)) return fallback;
+    const raw  = fs.readFileSync(filePath, 'utf8');
+    const data = JSON.parse(raw);
+    responseCache.set('file:' + filePath, data, 60_000); // 1 min
+    return data;
+  } catch {
+    return fallback;
+  }
+}
+
+// ─── EXPORTS ─────────────────────────────────────────────
+module.exports = {
+  // Caches
+  imageCache,
+  responseCache,
+  bufferCache,
+
+  // Funções de imagem
+  getImageCached,
+  warmupImageCache,
+
+  // Throttle/Debounce
+  throttle,
+  debounce,
+
+  // JSON I/O otimizado
+  writeJSONDebounced,
+  readJSONCached,
+
+  // Monitor
+  monitor,
+
+  // Atalhos
+  startMonitor:   () => monitor.start(),
+  stopMonitor:    () => monitor.stop(),
+  memReport:      () => monitor.printReport(),
+  forceCleanup:   () => monitor.forceCleanup(),
+  heapMB,
+
+  // Config (editável em runtime)
+  CONFIG,
+};

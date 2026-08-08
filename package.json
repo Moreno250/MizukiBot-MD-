@@ -1,0 +1,37 @@
+{
+  "name": "MizukiBot-MD",
+  "description": "Qualquer dúvida chama no WhatsApp: 55 27 99287-0575",
+  "version": "6.0.0-Open-Beta",
+  "scripts": {
+    "start": "sh start.sh",
+    "clean": "rm -rf './banco de dados/qrcode' && echo 'Pasta deletada. Execute npm start para iniciar'",
+    "test": "node iniciar.js"
+  },
+  "keywords": [
+    "BOT"
+  ],
+  "author": "Sattz",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc13",
+    "axios": "^0.21.1",
+    "cfonts": "^3.3.1",
+    "chalk": "^5.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "colors": "^1.4.0",
+    "file-type": "^16.5.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^4.0.5",
+    "fs-extra": "^11.1.0",
+    "jsdom": "^29.1.1",
+    "linkifyjs": "^4.1.0",
+    "moment-timezone": "^0.5.40",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^2.6.7",
+    "node-webpmux": "^3.2.1",
+    "qrcode-terminal": "^0.12.0",
+    "request": "^2.88.2",
+    "yt-search": "^2.13.1",
+    "ytdl-core": "^4.11.5"
+  }
+}

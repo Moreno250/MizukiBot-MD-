@@ -1,0 +1,26 @@
+[
+  {
+    "cmdSemPrefixo": "b",
+    "comandoOriginal": "ban"
+  },
+  {
+    "cmdSemPrefixo": "t",
+    "comandoOriginal": "take"
+  },
+  {
+    "cmdSemPrefixo": "prm",
+    "comandoOriginal": "promover"
+  },
+  {
+    "cmdSemPrefixo": "rbx",
+    "comandoOriginal": "rebaixar"
+  },
+  {
+    "cmdSemPrefixo": "d",
+    "comandoOriginal": "del"
+  },
+  {
+    "cmdSemPrefixo": "fig",
+    "comandoOriginal": "s"
+  }
+]

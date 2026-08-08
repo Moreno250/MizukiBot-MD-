@@ -1,0 +1,27 @@
+[
+  {
+    "antifake": false,
+    "legenda_estrangeiro": "❌ *Números estrangeiros não são permitidos neste grupo!*",
+    "listanegra": [],
+    "ANTI_DDD": {
+      "active": false,
+      "listaProibidos": []
+    },
+    "wellcome": [
+      {
+        "bemvindo1": false,
+        "legendabv": null,
+        "legendasaiu": 0
+      },
+      {
+        "bemvindo2": false,
+        "legendabv": null,
+        "legendasaiu": 0
+      }
+    ],
+    "multiprefix": false,
+    "prefixos": [
+      "!"
+    ]
+  }
+]

@@ -1,0 +1,744 @@
+const infobancarac = []
+const infocontador = []
+const infolistanegra = (prefix) => {
+return `Este comando é usado para registrar números que serão banidos caso entrem no grupo.
+
+_Há um comando para administração e outro para líderes do bot_
+
+*Uso dos comandos para a administração*
+
+• *${prefix}ListaNegra*
+( Você pode mencionar a mensagem da pessoa ou digitar o número dela.
+Exemplo: ${prefix}listanegra @user )
+
+• *${prefix}TirarDaLista*
+( Mesmo processo mencionado acima.
+Mencione a mensagem ou digite o número sem espaços )
+
+• *${prefix}ListBan* _lista de números_
+( Aqui ficam todos os números registrados na lista negra.
+É útil para remover um número usando ${prefix}tirardalista )
+
+━━━━━━━━━━━━━━
+
+*Comandos para líderes e dono*
+
+• *LISTA NEGRA GLOBAL*
+
+° Para líderes do bot há informações extras sobre esta função, use:
+*${prefix}info_listanegra*
+
+• É basicamente o mesmo processo da lista negra acima, porém remove usuários de todos os grupos em que o bot possui administração.
+
+• *${prefix}ListaNegraG*
+( Mencione a mensagem, use @ ou digite apenas o número sem espaços )
+
+• *${prefix}TirarDaListaG*
+( Para remover um número da lista negra global, utilize *${prefix}ListBanG* )
+
+━━━━━━━━━━━━━━
+
+Bot: MizukiBot-MD`
+}
+
+const infopalavrao = []
+
+const infosorteio = []
+
+const cmd_termux = (prefix) => {
+return `
+_-_-_-_-_-_-_-_-_
+
+Para saber como instalar o termux e da os comandos, veja esse site:
+
+https://github.com/SattzModz/MizukiBot-MD- `
+;
+};
+
+const infoduelo = []
+const idiomagtts = []
+
+const infotransmitir = []
+
+const infoaluguel = (prefix, pushname) => {
+return
+
+`​🗓️ Gerenciamento de Aluguel e Expiração (Lembrete Automático) 🔔
+​Olá ${pushname}! Este guia explica como utilizar o comando para registrar a expiração de aluguéis e receber lembretes automáticos.
+
+​1️⃣ Registrando um Aluguel (${prefix}rg_aluguel)
+​Use este comando para registrar a data de expiração e o contato do dono do aluguel.
+​Sintaxe: ${prefix}rg_aluguel [mês/dia]|[número do dono]
+​Exemplo: ${prefix}rg_aluguel 01/01|5521999999999
+​Isso registra a expiração para o dia 1º de Janeiro e anexa o número do dono.
+​Função:
+​O bot enviará uma mensagem no seu privado no dia da expiração.
+​Ele renovará automaticamente o registro para o próximo mês, na mesma data (Ex: de 01/01 para 01/02).
+
+​⚠️ ALERTA:
+​Não registre para o mês 12, pois o sistema pode tentar renovar para o mês 13 (o que geraria um erro). Se for o caso, simplesmente remova o registro após a expiração.
+
+​2️⃣ Removendo um Registro de Aluguel (${prefix}rm_aluguel)
+​Para remover permanentemente um registro:
+​Sintaxe: ${prefix}rm_aluguel [id do grupo]
+​Você precisa do ID do grupo que está registrado o aluguel.
+
+​3️⃣ Como Obter o ID do Grupo
+​Existem duas formas de obter o ID necessário:
+​Diretamente no Grupo: Use o comando ${prefix}iddogrupo
+​Lista de Registros: Use o comando ${prefix}lista_aluguel
+
+​4️⃣ Visualizando Todos os Aluguéis (${prefix}lista_aluguel)
+​Este comando mostra todos os aluguéis que você registrou:
+​Comando: ${prefix}lista_aluguel
+​Função: Exibe a lista completa, onde você também pode pegar o ID do grupo para usar no comando de remoção.
+​Boa sorte! 🍀`
+;
+};
+
+const anotacao = (prefix) => {
+return 
+
+`​📝 Bloco de Notas do Grupo: Comandos de Anotação 📌
+​Olá ${pushname}! Se você está lendo isso, provavelmente está curioso sobre o comando Anotação. Ele funciona como um bloco de notas para o seu grupo, ideal para guardar informações importantes!
+​
+🔍 Comandos de Anotação
+​${prefix}anotações
+​${prefix}anotar
+​${prefix}tirar_nota
+​${prefix}nota [título]
+
+​1️⃣ Criando uma Anotação (${prefix}anotar)
+​Este comando é usado para criar uma nova nota. Você deve separar o título da anotação com o caractere de barra vertical (|).
+​Sintaxe: ${prefix}anotar [título]|[sua anotação]
+​Exemplo: ${prefix}anotar ABC|ABC são 3 letras do alfabeto, utilizada bastante
+Neste caso, "ABC" é o Título e o restante é o Conteúdo da nota.
+
+​2️⃣ Visualizando Todas as Anotações (${prefix}anotações)
+​Comando: ${prefix}anotações
+​Função: Mostra uma lista de todas as anotações que foram criadas no grupo.
+
+​3️⃣ Buscando uma Anotação Específica (${prefix}nota)
+​Para buscar e exibir o conteúdo de uma anotação:
+​Sintaxe: ${prefix}nota [título]
+​Exemplo: ${prefix}nota ABC
+O bot exibirá o conteúdo da nota com o título "ABC".
+
+​4️⃣ Apagando uma Anotação (${prefix}tirar_nota)
+​Para remover permanentemente uma anotação:
+​Sintaxe: ${prefix}tirar_nota [título]
+​Exemplo: ${prefix}tirar_nota ABC
+Com isso, a anotação "ABC" será apagada.
+
+​É isso! Agora você pode usar o Bloco de Notas do grupo. Boa sorte! ✨
+`;
+};
+
+const infobemvindo = (prefix) => {
+return ` ╭︎⊰๑ᨐ✶乡»̶❁︎«̶乡✶ᨐ๑⊱╮︎ 
+╎💫 ∆𝐁𝐄𝐌-𝐕𝐈𝐍𝐃𝐎∆ 💫
+╰︎⊰๑ᨐ✶乡»̶❁︎«̶乡✶ᨐ๑⊱╯︎
+╎ 『 O bem-vindo, é uma mensagem que o bot envia toda vez que alguém entrar ou for adicionado ao seu grupo. Abaixo irei mostrar o passo a passo de como configura-lo. 』
+┗│
+╎
+╭︎⊰๑ᨐ✶乡»̶❁︎«̶乡✶ᨐ๑⊱╮︎ 
+╎🪄∆𝐔𝐒𝐎∆🪄
+╰︎⊰๑ᨐ✶乡»̶❁︎«̶乡✶ᨐ๑⊱╯︎
+╎ 『 Primeiro você deve ativar o bem-vindo caso não esteja ativo. Use: 
+╎• *${prefix}bemvindo* ( _Com imagem e legenda_ )
+╎• *${prefix}bemvindo2* ( _Somente a legenda_ ) 』
+┗│
+╎
+╭︎⊰๑ᨐ✶乡»̶❁︎«̶乡✶ᨐ๑⊱╮︎ 
+╎💥∆𝐋𝐄𝐆𝐄𝐍𝐃𝐀∆💥
+╰︎⊰๑ᨐ✶乡»̶❁︎«̶乡✶ᨐ๑⊱╯︎
+╎『Para criar a legenda você deve digitar este
+╎comando ↴
+╎
+╎『 *${prefix}legendabv* ou *${prefix}legendabv2*, e após sua legenda.
+╎
+╎  • Configurações básicas para a legenda.
+╎
+╎✤࣭ٜ࣭ٜ࣭ٜ࣭ٜ⃕◗⃞ ⃝✿ | #nomedogp# É o nome do grupo;
+╎
+╎✤࣭ٜ࣭ٜ࣭ٜ࣭ٜ⃕◗⃞ ⃝✿ | #numerobot# Mostra o número do bot;
+╎
+╎✤࣭ٜ࣭ٜ࣭ٜ࣭ٜ⃕◗⃞ ⃝✿ | #numerodele# Menciona o "@" do participante;
+╎
+ #prefixo# Mostra o prefixo do bot;
+╎
+╎✤࣭ٜ࣭ٜ࣭ٜ࣭ٜ⃕◗⃞ ⃝✿ | #descrição# Exibe toda a descrição do grupo;
+╎
+╎✤࣭ٜ࣭ٜ࣭ٜ࣭ٜ⃕◗⃞ ⃝✿ | #hora# Informa a hora atual ( Horário de Brasília ).
+╎
+╎✤࣭ٜ࣭ٜ࣭ٜ࣭ٜ⃕◗⃞ ⃝✿ | #estado# Informa de qual estado o usuário é
+╎
+╎ 『E também tem esse comando: ↴
+╎
+╎『 *${prefix}legendasaiu* ou *${prefix}legendasaiu2*, com o mesmo tipo de legenda acima, so que para quando o usuário sair ou ser removido do grupo. 』
+┗`;
+};
+
+global.Msg_InfoBot = `✨   • 𝙸𝙽𝙵𝙾 𝙱𝙾𝚃 •   ✨
+-
+        『 𝙾𝚒𝚒𝚒𝚒ê #pushname# ˃ 𖥦 ˂ 🌙 』
+-
+    ➮ 𝙿𝚛𝚎𝚏𝚒𝚡𝚘: 🔖
+    ↳ 『 #prefix# 』
+-
+    ➮ 𝙽𝚘𝚖𝚎 𝚍𝚘 𝙱𝚘𝚝: 🤖
+    ↳ 『 #nomebot# 』
+-
+    ➮ 𝚅𝚎𝚛𝚜𝚊̃𝚘: 🚀
+    ↳ 『 6.0.0 』
+-
+    ➮ 𝙳𝚘𝚗𝚘: 👑
+    ↳ 『 #nickdono# — #numerodono# 』
+-
+    ➮ 𝙲𝚛𝚒𝚊𝚍𝚘𝚛: 🌸
+    ↳ 『 Sattz | 5527992870575 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+global.Msg_Ping = `⚡   • 𝙿𝙸𝙽𝙶 •   ⚡
+-
+        『 𝙳𝚎𝚜𝚎𝚖𝚙𝚎𝚗𝚑𝚘 𝚍𝚘 𝙱𝚘𝚝 』 ↴
+-
+    ➮ 𝚅𝚎𝚕𝚘𝚌𝚒𝚍𝚊𝚍𝚎: ✨️
+    ↳ 『 #latencia# ms 』
+-
+    ➮ 𝙰𝚝𝚛𝚊𝚜𝚘: 💦
+    ↳ 『 #atraso# ms 』
+-
+    ➮ 𝙼𝚎𝚖ó𝚛𝚒𝚊: 💎
+    ↳ 『 #ramuso# GB usados de #ramtotal# GB 』
+-
+    ➮ 𝙴𝚜𝚝𝚊𝚝í𝚜𝚝𝚒𝚌𝚊𝚜: 🌈
+    ↳ 『 🌃 #grupos# grupos 』
+    ↳ 『 🚀 #tcmd# comandos 』
+-
+    ➮ 𝚄𝚙𝚝𝚒𝚖𝚎: 🌟
+    ↳ 『 #uptime# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+global.Msg_Status = `🛡️   • 𝚂𝚃𝙰𝚃𝚄𝚂 𝙳𝙾 𝙶𝚁𝚄𝙿𝙾 •   🛡️
+-
+        『 𝙲𝚘𝚗𝚏𝚒𝚐𝚞𝚛𝚊𝚌̧𝚘̃𝚎𝚜 𝙰𝚝𝚒𝚟𝚊𝚜 』 ↴
+-
+    ➮ 𝙿𝚛𝚘𝚝𝚎𝚌̧𝚊̃𝚘: 🔐
+    ↳ 『 🔗 Antilink Hard: #antilink# 』
+    ↳ 『 🔗 Antilink GP: #antilinkgp# 』
+    ↳ 『 🤖 Anti Meta AI: #antimeta# 』
+    ↳ 『 👤 Antifake: #antifake# 』
+    ↳ 『 📍 Antiloc: #antiloc# 』
+    ↳ 『 🕵️ X9: #x9# 』
+    ↳ 『 📢 Anti Canal: #anticanal# 』
+-
+    ➮ 𝙼í𝚍𝚒𝚊: 🎞
+    ↳ 『 🎥 Anti Vídeo: #antivid# 』
+    ↳ 『 🖼️ Anti Imagem: #antiimg# 』
+    ↳ 『 🎵 Anti Áudio: #antiaudio# 』
+    ↳ 『 📄 Anti Documento: #antidoc# 』
+    ↳ 『 📇 Anti Contato: #antictt# 』
+    ↳ 『 🎴 Anti Sticker: #antisticker# 』
+    ↳ 『 🎴 Auto Sticker: #autofigu# 』
+-
+    ➮ 𝙲𝚘𝚖𝚙𝚘𝚛𝚝𝚊𝚖𝚎𝚗𝚝𝚘: ⚙️
+    ↳ 『 📝 Anti Notas: #antinotas# 』
+    ↳ 『 🔤 Limite Caractere: #antiflood# 』
+    ↳ 『 🛍️ Anti Catálogo: #anticatalogo# 』
+    ↳ 『 🔕 Anti Status: #antimention# 』
+    ↳ 『 🤬 Anti Palavrão: #palavrao# 』
+    ↳ 『 💬 Auto Resposta: #autorepo# 』
+-
+    ➮ 𝙴𝚡𝚝𝚛𝚊𝚜: ✨
+    ↳ 『 🎉 Bem Vindo 1: #welkom1# 』
+    ↳ 『 🎊 Bem Vindo 2: #welkom2# 』
+    ↳ 『 🎮 Brincadeiras: #modobn# 』
+    ↳ 『 🪙 Modo Coins: #modocoins# 』
+    ↳ 『 🧠 Modo IA: #modoia# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+global.Msg_ClimaCity = `✨   • 𝙲𝙻𝙸𝙼𝙰 •   ✨
+-
+        『 #cidade##pais# 』 ↴
+-
+    ➮ 𝚃𝚎𝚖𝚙𝚎𝚛𝚊𝚝𝚞𝚛𝚊: 🌡️
+    ↳ 『 #temperatura# 』
+-
+    ➮ 𝚄𝚖𝚒𝚍𝚊𝚍𝚎: 💧
+    ↳ 『 #umidade# 』
+-
+    ➮ 𝚅𝚎𝚗𝚝𝚘: 💨
+    ↳ 『 #vento# 』
+-
+    ➮ 𝙲𝚘𝚗𝚍𝚒𝚌̧𝚊̃𝚘: #climaemoji#
+    ↳ 『 #clima# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+
+
+global.Msg_Donos = `╔*. : ｡✿ * ﾟ * .: ｡ ✿ * ﾟ  * . : ｡ ✿ *╗
+┃ 🩵 • 𝐈𝐍𝐅𝐎 𝐃𝐎𝐍𝐎 •【🌈】
+╚֘*. : ｡✿ * ﾟ * .: ｡ ✿ * ﾟ  * . : ｡ ✿ *໋╝
+╎
+╔֘═•❀･ﾟ✦*･ﾟ| ⊰🌙⊱ |ﾟ･*✦ﾟ･❀•═╗
+┃ ✫✫✫✫✫
+┃ 𝐋𝐢𝐝𝐞𝐫𝐞𝐬 𝐝𝐚 #bot#
+┃
+┃᭪➣ 𝐃𝐨𝐧𝐨 𝐨𝐟𝐢𝐜𝐢𝐚𝐥: -〘 #dono# 〙-
+┃↳ 𝐍𝐮𝐦𝐞𝐫𝐨:〘 #numero# 〙
+┃
+┃᭪➣ 𝐿𝑖𝑑𝑒𝑟1: -〘 #lider1# 〙-
+┃᭪➣ 𝐿𝑖𝑑𝑒𝑟2: -〘 #lider2# 〙-
+┃᭪➣ 𝐿𝑖𝑑𝑒𝑟3: -〘 #lider3# 〙-
+┃᭪➣ 𝐿𝑖𝑑𝑒𝑟4: -〘 #lider4# 〙-
+┃᭪➣ 𝐿𝑖𝑑𝑒𝑟5: -〘 #lider5# 〙-
+┃᭪➣ 𝐿𝑖𝑑𝑒𝑟6: -〘 #lider6# 〙-
+╚֘֘═•❀･ﾟ✦*･ﾟ| ⊰🌙⊱ |ﾟ･*✦ﾟ･❀•═╝`
+
+// ╭━━━ TEXTOS DE GRUPO ━━━╮
+
+global.Msg_Mute = `Olá *@#mutado#*, você acaba de ser mutado, ação realizada pelo(a) adm: *@#adm#*.\n–\n• Caso você dar um piu, sua(s) mensagem(ns) vai ser apagada.`
+global.Msg_Desmute = `Olá *@#desmutado#* você acaba de ser desmutado pelo(a) adm *@#adm#*.\n–\n• Agora você pode falar a vontade no grupo, sem interrupções.`
+
+
+global.Msg_Promovido = `*⏤͟͟͞͞O participante* -〘 @#promovido# 〙 *foi promovido a cargo de adm do grupo 👑 pelo admin* - 〘 @#adm# 〙`
+global.Msg_Rebaixado = `*⏤͟͟͞͞O adminstrador* -〘 @#rebaixado# 〙 *foi rebaixado para membro comum 💨 pelo admin* - 〘 @#adm# 〙`
+
+
+global.Msg_GrupoAberto = `*grᥙ⍴᥆ ᥲᑲᥱr𝗍᥆ ᥴ᥆m sᥙᥴᥱss᥆!!!✨*\n\n#data#`
+global.Msg_GrupoFechado = `*grᥙ⍴᥆ 𝖿ᥱᥴһᥲძ᥆ ᥴ᥆m sᥙᥴᥱss᥆!!!✨*\n\n#data#`
+
+
+global.Msg_Prefixo = `🌙 mᥱᥙ ⍴rᥱ𝖿і᥊᥆ ᥱ́『 #prefixo# 』, ᥙsᥱ ᥱᥣᥱ ᥲᥒ𝗍ᥱs ძ᥆s mᥱᥙs ᥴ᥆mᥲᥒძ᥆s! 🪻✨`
+
+
+// ╭━━━ RESPOSTAS PADRÃO ━━━╮
+global.Res_SoGrupo = "🪻 ᥴ᥆mᥲᥒძ᥆ ძіs⍴᥆ᥒі᥎ᥱᥣ ᥲ⍴ᥱᥒᥲs ⍴ᥲrᥲ grᥙ⍴᥆s. ✨"
+global.Res_SoDono = "*ᥴ᥆mᥲᥒძ᥆ ᥲ⍴ᥱᥒᥲs ⍴ᥲrᥲ mᥱᥙ ძ᥆ᥒ᥆ 🙇‍♂️*"
+global.Res_SoCreator = "*ᥴ᥆mᥲᥒძ᥆ ᥲ⍴ᥱᥒᥲs ⍴ᥲrᥲ mᥱᥙ ᥴrіᥲძ᥆r. 🤦‍♀️*"
+global.Res_SoAdm = "*᥎᥆ᥴᥱ̂ ᥒᥲ̂᥆ ᥱ́ ᥲძmіᥒ ⍴ᥲrᥲ ᥱ᥊ᥱᥴᥙ𝗍ᥲr ᥱssᥱ ᥴ᥆mᥲᥒძ᥆! 😠*"
+global.Res_SoVip = "*ᥴ᥆mᥲᥒძ᥆ ᥱ᥊ᥴᥣᥙsі᥎᥆ ᥲ⍴ᥱᥒᥲs ⍴ᥲrᥲ ᥙsᥙᥲrі᥆s ᥎і⍴s. 🍸💸*"
+global.Res_BotADM = "*ᥱᥙ ⍴rᥱᥴіs᥆ sᥱr ᥲძm ძ᥆ grᥙ⍴᥆* 🌙"
+global.Res_SoModoBN = '*᥆ m᥆ძ᥆ ᑲrіᥒᥴᥲძᥱіrᥲ ⍴rᥱᥴіsᥲ ᥱs𝗍ᥲr ᥲ𝗍і᥎᥆...⭐*\n> Comando de ativação: `ModoBrincadeiras`'
+global.Res_ErroCmd = "ᥲᥲᥲһ... ᥲᥣg᥆ ძᥱᥙ ᥱrr᥆! 🥺✨ 𝗍ᥱᥒ𝗍ᥱ ᥒ᥆᥎ᥲmᥱᥒ𝗍ᥱ ძᥱ⍴᥆іs. 🦋"
+global.Msg_BanGp = `*⏤͟͟͞͞ᥱs𝗍ᥱ grᥙ⍴᥆* -〘 *𝖿᥆і ᑲᥲᥒіძ᥆ ᥴ᥆m sᥙᥴᥱss᥆* 〙 *᥆ ᑲ᥆𝗍 𝖿іᥴᥲrᥲ̀ іᥒძіs⍴᥆ᥒі᥎ᥱᥣ ᥒᥱssᥱ ᥴһᥲ𝗍* 🙇‍♂️`
+global.Msg_UnbanGp = `*⏤͟͟͞͞ᥱs𝗍ᥱ grᥙ⍴᥆* -〘 *𝖿᥆і ძᥱsᑲᥲᥒіძ᥆ ᥴ᥆m sᥙᥴᥱss᥆* 〙 *᥆ ᑲ᥆𝗍 ᥱs𝗍ᥲ́ ᥣі᥎rᥱ ⍴ᥲrᥲ ᥙsᥲr sᥱᥙs ᥴ᥆mᥲᥒძ᥆s* ✨`
+
+global.Msg_TotalCmd = `╎〔  𝐘𝐮𝐦𝐞𝐦𝐢𝐳𝐮𝐤𝐢 夢月  〕
+   ૮ ˶ᵔ ᵕ ᵔ˶ ა • 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 
+𓂃˖˳·˖ ִֶָ ⋆💙͙⋆  ִֶָ˖·˳˖𓂃 ִֶָ
+┏══✿══╡°˖✧✿✧˖°╞══✿══┓
+┃╭╾ׁ═╼〔 • 🌙 • 〕╾ׁ═╼╮
+┃╎✰⋆｡:ﾟ･*☽:ﾟ･⋆｡✰
+┃╎ *⍴᥆ssᥙ᥆ ᥲ𝗍ᥙᥲᥣmᥱᥒ𝗍ᥱ \`#total#\`*
+┃╎✰⋆｡:ﾟ･*☽:ﾟ･⋆｡✰
+┃╰╾ׁ═╼〔 • 🌙 • 〕╾ׁ═╼╯
+┗══✿══╡°˖✧✿✧˖°╞══✿══┛
+-
+
+> #nickdono# - #nomebot#`
+
+global.Msg_PerfilMencao = `✨   • 𝙿𝙴𝚁𝙵𝙸𝙻 •   ✨
+-
+        『 @#numero# 』 ↴
+-
+    ➮ 𝙽í𝚟𝚎𝚕 𝙶𝚊𝚍𝚘: 🐂
+    ↳ 『 #gado#% 』
+-
+    ➮ 𝙲𝚎𝚕𝚞𝚕𝚊𝚛: 📱
+    ↳ 『 #celular# 』
+-
+    ➮ 𝙽í𝚟𝚎𝚕 𝙿𝚞𝚝𝚊: 💙
+    ↳ 『 #puta#% 』
+-
+    ➮ 𝙽í𝚟𝚎𝚕 𝙶𝚘𝚜𝚝𝚘𝚜𝚞𝚛𝚊: 😋
+    ↳ 『 #gostosura#% 』
+-
+    ➮ 𝚅𝚊𝚕𝚘𝚛 𝚍𝚘 𝙿𝚛𝚘𝚐𝚛𝚊𝚖𝚊: 🍼
+    ↳ 『 R$#programa# 』
+-
+    ➮ 𝙲𝚘𝚗𝚜𝚎𝚕𝚑𝚘: 💬
+    ↳ 『 #conselho# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+global.Msg_PerfilProprio = `✨   • 𝙿𝙴𝚁𝙵𝙸𝙻 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝙿𝚎𝚜𝚜𝚘𝚊𝚒𝚜 』 ↴
+-
+    ➮ 𝙽𝚘𝚖𝚎: 🗒
+    ↳ 『 #nome# 』
+-
+    ➮ 𝙽ú𝚖𝚎𝚛𝚘: 🪀
+    ↳ 『 @#numero# 』
+-
+    ➮ 𝙽í𝚟𝚎𝚕 𝙶𝚊𝚍𝚘: 🐂
+    ↳ 『 #gado#% 』
+-
+    ➮ 𝙲𝚎𝚕𝚞𝚕𝚊𝚛: 📱
+    ↳ 『 #celular# 』
+-
+    ➮ 𝙽í𝚟𝚎𝚕 𝙿𝚞𝚝𝚊: 💙
+    ↳ 『 #puta#% 』
+-
+    ➮ 𝙽í𝚟𝚎𝚕 𝙶𝚘𝚜𝚝𝚘𝚜𝚞𝚛𝚊: 😋
+    ↳ 『 #gostosura#% 』
+-
+    ➮ 𝚅𝚊𝚕𝚘𝚛 𝚍𝚘 𝙿𝚛𝚘𝚐𝚛𝚊𝚖𝚊: 🍼
+    ↳ 『 R$#programa# 』
+-
+    ➮ 𝙲𝚘𝚗𝚜𝚎𝚕𝚑𝚘: 💬
+    ↳ 『 #conselho# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+global.Msg_NotFound = `✨   • 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙽Ã𝙾 𝙴𝙽𝙲𝙾𝙽𝚃𝚁𝙰𝙳𝙾 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 』 ↴
+-
+    ➮ 𝚄𝚜𝚞á𝚛𝚒𝚘: 👤
+    ↳ 『 @#usuario# 』
+-
+    ➮ 𝙿𝚛𝚎𝚏𝚒𝚡𝚘: 🔖
+    ↳ 『 #prefix# 』
+-
+    ➮ 𝙷𝚘𝚛á𝚛𝚒𝚘: 🕐
+    ↳ 『 #hora# — #data# 』
+-
+    ➮ 𝙲𝚘𝚖𝚊𝚗𝚍𝚘: ❓
+    ↳ 『 #cmd# 』
+-
+    ➮ 𝚅𝚘𝚌ê 𝚚𝚞𝚒𝚜 𝚍𝚒𝚣𝚎𝚛: 💡
+    ↳ 『 #sugestao# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+global.Link_NotFound = 'https://i.ibb.co/4nYdmW6d/87176c7733e5.jpg'
+
+//Desativar e ativar foto
+global.UseImage_NotFound = true
+
+global.Msg_InfoKey = ` 🙇‍♂️ *SETKEY - GUIA*   
+
+💖 *Como usar:*
+\`#prefix#setkey <nome_exato> <valor>\`
+
+• 🔑 *KEYS DAS APIS*
+
+• \`API_KEY_BRONXYS\`
+• \`API_KEY_ZERO\`
+• \`APIKEY_KIMORI\`
+
+
+• 😻 *SITES DAS APIS*
+
+• \`BronxysSite\`
+• \`zerosite\`
+• \`API_KIMORI_URL\`
+
+
+• 💦 *EXEMPLOS*
+
+\`#prefix#setkey API_KEY_BRONXYS MinhaKey123\`
+\`#prefix#setkey BronxysSite https://api.bronxys.com\`
+
+
+• 🥰 *VER VALORES ATUAIS*
+
+ - Digite só \`#prefix#setkey\` sem argumentos
+
+• ⚠️ *Atenção:* O nome da chave deve ser *exatamente igual* ao mostrado acima, respeitando letras maiúsculas e minúsculas!`
+
+
+// ╭━━━ TEXTOS DE MÍDIA ━━━╮
+
+global.Msg_Play = `✨   • mᥙsіᥴ ⍴ᥣᥲᥡ •   ✨
+-
+        『 @#user# ♫ 』
+-
+    ➮ 𝗍і́𝗍ᥙᥣ᥆: 🎵
+    ↳ 『 #titulo# 』
+-
+    ➮ ძᥙrᥲᥴ̧ᥲ̃᥆: ⏱
+    ↳ 『 #duracao# 』
+-
+    ➮ ᥎іᥱᥕs: 👁️
+    ↳ 『 #views# visualizações 』
+-
+    ➮ ᥲᥙ𝗍һ᥆r: 🎤
+    ↳ 『 #autor# 』
+-
+    ➮ ᥙrᥣ: 🔗
+    ↳ 『 #url# 』
+-
+    ➮ іძ: 🪪
+    ↳ 『 \`#id#\` 』
+-
+    ✦ #saudacao# ✦
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+global.Msg_PinVideo = `✨   • 𝙿𝙸𝙽𝚃𝙴𝚁𝙴𝚂𝚃 𝚅𝙸𝙳𝙴𝙾 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝚍𝚘 𝚅í𝚍𝚎𝚘 』 ↴
+-
+    ➮ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊: 💎
+    ↳ 『 #legenda# 』
+-
+    ➮ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚛: 🌹
+    ↳ 『 #fullname# (@#upload_by#) 』
+-
+    ➮ 𝚂𝚎𝚐𝚞𝚒𝚍𝚘𝚛𝚎𝚜: 🧉
+    ↳ 『 #seguidores# 』
+-
+    ➮ 𝙵𝚘𝚗𝚝𝚎: 🌸
+    ↳ 『 #fonte# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+global.Msg_TikTok = `✨   • 𝚃𝙸𝙺𝚃𝙾𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝚍𝚘 𝚅í𝚍𝚎𝚘 』 ↴
+-
+    ➮ 𝚃í𝚝𝚞𝚕𝚘: 😆
+    ↳ 『 #titulo# 』
+-
+    ➮ 𝙰𝚞𝚝𝚘𝚛: 💖
+    ↳ 『 #autor# 』
+-
+    ➮ 𝙳𝚞𝚛𝚊𝚌̧𝚊̃𝚘: ✨
+    ↳ 『 #duracao#s 』
+-
+    ➮ 𝙴𝚜𝚝𝚊𝚝í𝚜𝚝𝚒𝚌𝚊𝚜: 📊
+    ↳ 『 💕 #curtidas# curtidas 』
+    ↳ 『 📱 #comentarios# comentários 』
+    ↳ 『 🌸 #compartilhamentos# compartilhamentos 』
+    ↳ 『 🎬 #visualizacoes# visualizações 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+
+
+// ╭━━━ TEXTOS DE STALK / INFO ━━━╮
+
+global.Msg_TikTokStalker = `
+✨   • 𝙏𝙄𝙆𝙏𝙊𝙆 𝙎𝙏𝘼𝙇𝙆𝙀𝙍 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝙳𝚘 𝙿𝚎𝚛𝚏𝚒𝚕 』
+-
+
+ ↝ 𝑵𝒐𝒎𝒆: #nome#
+ ↝ 𝑼𝒔𝒖𝒂𝒓𝒊𝒐: @#usuario#
+ ↝ 𝑰𝒅: \`#id#\`
+ ↝ 𝑽𝒆𝒓𝒊𝒇𝒊𝒄𝒂𝒅𝒐: #verificado#
+ ↝ 𝑪𝒐𝒏𝒕𝒂 𝑷𝒓𝒊𝒗𝒂𝒅𝒂: #privado#
+ ↝ 𝑫𝒆𝒔𝒄𝒓𝒊𝒄̧𝒂̃𝒐 ↴
+  ↳ 〘 #bio# 〙
+-
+          『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝙰𝚟𝚊𝚗𝚌̧𝚊𝚍𝚊𝚜 』
+-  
+ ↝ #curtidas# curtidas
+ ↝ #seguidores# seguidores
+ ↝ #seguindo# seguindo
+ ↝ #videos# vídeos
+-
+
+⏤͟͟͞͞𝐌𝐢𝐳𝐮𝐤𝐢𝐁𝐨𝐭-𝐌𝐃 ✿`
+
+global.Msg_AnimeInfo = `✨   • 𝘼𝙉𝙄𝙈𝙀 𝙎𝙀𝘼𝙍𝘾𝙃 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝙳𝚘 𝙰𝚗𝚒𝚖𝚎 』 ↴
+-
+    ➮ 𝙽𝚘𝚖𝚎: 🎴
+    ↳ 『 #titulo# 』
+-
+    ➮ 𝙰𝚟𝚊𝚕𝚒𝚊𝚌̧𝚊̃𝚘: 💖
+    ↳ 『 ✰ #nota# 』
+-
+    ➮ 𝙴𝚙𝚒𝚜𝚘́𝚍𝚒𝚘𝚜: 🎞
+    ↳ 『 #episodios# 』
+-
+    ➮ 𝙻𝚒𝚗𝚔: 📎
+    ↳ 『 #link# 』
+-
+    ➮ 𝙳𝚎𝚜𝚌𝚛𝚒𝚌̧𝚊̃𝚘: 📃
+    ↳ 『 #descricao# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 ✿`
+
+global.Msg_SpotifyEncontrado = `*Yaaay! 😳 Encontrei* #nome# *— #artista#!* 💖✨\n\n*Agora estou baixando pra você!* 🎶`
+
+global.Msg_SpotifyEnviado = `*Prontinho! 😊 Música enviada com sucesso!* 💞🎵\n\n*😆 #titulo#* — #artista#\n*✨ Duração:* #duracao#`
+
+global.Msg_YtStalk = `✨   • 𝚈𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚂𝚃𝙰𝙻𝙺 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝚍𝚘 𝙲𝚊𝚗𝚊𝚕 』 ↴
+-
+    ➮ 𝙲𝚊𝚗𝚊𝚕: 🪷
+    ↳ 『 #nome# 』
+-
+    ➮ 𝙷𝚊𝚗𝚍𝚕𝚎: 🎀
+    ↳ 『 #handle# 』
+-
+    ➮ 𝙴𝚜𝚝𝚊𝚝í𝚜𝚝𝚒𝚌𝚊𝚜: 📊
+    ↳ 『 🌙 #inscritos# inscritos 』
+    ↳ 『 💝 #videos# vídeos 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙 _Consultado por #pushname#_`
+
+
+global.Msg_BrasileiraoBloco = `    ➮ 𝙿𝚘𝚜𝚒𝚌̧𝚊̃𝚘: #medalha#
+    ↳ 『 #posicao#º - #time# 』
+-
+    ➮ 𝙿𝚘𝚗𝚝𝚘𝚜: 🎯
+    ↳ 『 #pontos# pts — #aproveitamento#% de aproveitamento 』
+-
+    ➮ 𝙹𝚘𝚐𝚘𝚜: 📋
+    ↳ 『 #jogos# jogos 』
+-
+    ➮ 𝚁𝚎𝚜𝚞𝚕𝚝𝚊𝚍𝚘𝚜: 📊
+    ↳ 『 ✅ #vitorias#V  🟡 #empates#E  ❌ #derrotas#D 』
+-
+    ➮ 𝙶𝚘𝚕𝚜: ⚽
+    ↳ 『 🟢 #gols_pro# pró  |  🔴 #gols_contra# contra  |  #saldo# saldo 』
+-
+    ➮ 𝙲𝚊𝚛𝚝𝚘̃𝚎𝚜: 🟨
+    ↳ 『 🟨 #amarelos# amarelos  |  🟥 #vermelhos# vermelhos 』`
+
+global.Msg_BrasileiraoHeader = `⚽   • 𝘽𝙍𝘼𝙎𝙄𝙇𝙀𝙄𝙍Ã𝙊 •   ⚽
+-
+        『 𝚃𝚘𝚙 𝟹 𝚍𝚊 𝚃𝚊𝚋𝚎𝚕𝚊 』 ↴
+-
+#blocos#
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+
+global.Msg_PlayStore = `✨   • 𝙿𝙻𝙰𝚈 𝚂𝚃𝙾𝚁𝙴 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝚍𝚘 𝙰𝚙𝚙 』 ↴
+-
+    ➮ 𝙽𝚘𝚖𝚎: 📱
+    ↳ 『 #nome# 』
+-
+    ➮ 𝙳𝚎𝚜𝚎𝚗𝚟𝚘𝚕𝚟𝚎𝚍𝚘𝚛: 👨‍💻
+    ↳ 『 #desenvolvedor# 』
+-
+    ➮ 𝙽𝚘𝚝𝚊: ⭐
+    ↳ 『 #estrelas# 』
+-
+    ➮ 𝙻𝚒𝚗𝚔: 🔗
+    ↳ 『 #link# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+
+global.Msg_Noticia = `✨   • 𝙽𝙾𝚃𝙸́𝙲𝙸𝙰𝚂 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝚍𝚊 𝙽𝚘𝚝𝚒́𝚌𝚒𝚊 』 ↴
+-
+    ➮ 𝙵𝚘𝚗𝚝𝚎: 📰
+    ↳ 『 #fonte# 』
+-
+    ➮ 𝙽𝚘𝚝𝚒́𝚌𝚒𝚊: 📃
+    ↳ 『 #noticia# 』
+-
+    ➮ 𝙿𝚘𝚜𝚝𝚊𝚍𝚘 𝚎𝚖: 📅
+    ↳ 『 #postado# 』
+-
+    ➮ 𝙻𝚒𝚗𝚔: 📎
+    ↳ 『 #link# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+
+global.Msg_CEP = `✨   • 𝙲𝙾𝙽𝚂𝚄𝙻𝚃𝙰 𝙲𝙴𝙿 •   ✨
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝚍𝚘 𝙴𝚗𝚍𝚎𝚛𝚎𝚌̧𝚘 』 ↴
+-
+    ➮ 𝙲𝙴𝙿: 💎
+    ↳ 『 #cep# 』
+-
+    ➮ 𝙻𝚘𝚐𝚛𝚊𝚍𝚘𝚞𝚛𝚘: 🏠
+    ↳ 『 #logradouro# 』
+-
+    ➮ 𝙲𝚘𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚘: 🎐
+    ↳ 『 #complemento# 』
+-
+    ➮ 𝙱𝚊𝚒𝚛𝚛𝚘: 🏘
+    ↳ 『 #bairro# 』
+-
+    ➮ 𝙲𝚒𝚍𝚊𝚍𝚎: 🌃
+    ↳ 『 #cidade# — #estado# 』
+-
+    ➮ 𝙳𝙳𝙳: 📞
+    ↳ 『 (#ddd#) 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+
+global.Msg_RobloxStalker = `🎮   • 𝚁𝙾𝙱𝙻𝙾𝚇 𝚂𝚃𝙰𝙻𝙺𝙴𝚁 •   🎮
+-
+        『 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚌̧𝚘̃𝚎𝚜 𝚍𝚘 𝙿𝚎𝚛𝚏𝚒𝚕 』 ↴
+-
+    ➮ 𝚄𝚜𝚞á𝚛𝚒𝚘: 👤
+    ↳ 『 #username# (#displayName#) 』
+-
+    ➮ 𝙸𝙳: 🪪
+    ↳ 『 #id# 』
+-
+    ➮ 𝙳𝚎𝚜𝚌𝚛𝚒𝚌̧𝚊̃𝚘: 📝
+    ↳ 『 #descricao# 』
+-
+    ➮ 𝙴𝚜𝚝𝚊𝚝í𝚜𝚝𝚒𝚌𝚊𝚜: 📊
+    ↳ 『 👥 #amigos# amigos  |  ❤️ #seguidores# seguidores 』
+    ↳ 『 ➕ #seguindo# seguindo  |  🏅 #badges# badges 』
+    ↳ 『 👾 #grupos# grupos  |  🎮 #jogos# jogos favoritos 』
+-
+    ➮ 𝙿𝚛𝚎𝚜𝚎𝚗𝚌̧𝚊: 🟢
+    ↳ 『 #status# — #local# 』
+-
+    ➮ 𝙲𝚘𝚗𝚝𝚊: 🗓
+    ↳ 『 Criada em #criado# (#dias# dias) 』
+-
+    ➮ 𝚂𝚒𝚝𝚞𝚊𝚌̧𝚊̃𝚘: 🔎
+    ↳ 『 Banido: #banido#  |  Verificado: #verificado# 』
+-
+    ➮ 𝙿𝚎𝚛𝚏𝚒𝚕: 🔗
+    ↳ 『 #perfil# 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+
+global.Msg_PrintSite = `✨   • 𝙿𝚁𝙸𝙽𝚃 𝙳𝙴 𝚂𝙸𝚃𝙴 •   ✨
+-
+        『 𝙲𝚊𝚙𝚝𝚞𝚛𝚊 𝚍𝚘 𝚂𝚒𝚝𝚎 』 ↴
+-
+    ➮ 𝚄𝚁𝙻: 🌐
+    ↳ 『 #url# 』
+-
+    ➮ 𝚂𝚝𝚊𝚝𝚞𝚜: 📸
+    ↳ 『 Captura realizada com sucesso! 』
+-
+⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
+
+module.exports = {
+infobancarac, infolistanegra, infopalavrao, infobemvindo, infocontador, infosorteio, cmd_termux, infoduelo, idiomagtts, infotransmitir, infoaluguel, anotacao
+};
