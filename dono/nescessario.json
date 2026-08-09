@@ -6,7 +6,7 @@
   "consoleoff": true,
   "antipv": false,
   "anticall": false,
-  "visualizarmsg": true,
+  "visualizarmsg": false,
   "listanegraG": [
     "258856680190@s.whatsapp.net"
   ],
