@@ -176,7 +176,7 @@ const banner2 = cfonts.render(("MIZUKI"), {
 });
 
 // Banner secundário (créditos) — gradiente violeta/rosa, fonte console mais fina
-const banner3 = cfonts.render(("Criador: Sattz Skirov\nGithub: github.com/SattzModz/MizukiBot-MD-"), {
+const banner3 = cfonts.render(("Criador: moreno dev\nGithub: github.com/Moreno250/MizukiBot-MD-"), {
   font: 'console',
   align: 'center',
   gradient: ['#ff00cc', '#7a00ff'],

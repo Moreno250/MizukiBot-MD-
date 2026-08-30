@@ -1,3 +1,8 @@
+// Bot desenvolvido por: moreno DEV
+// Todos os direitos reservados © 2026
+// Proibida a venda ou revenda deste bot sem autorização. LEIA O README PARA ENTENDER
+//NAO TIRA OS CRÉDITOS
+
 const _origStderr = process.stderr.write.bind(process.stderr);
 process.stderr.write = (chunk, ...args) => {
   const str = typeof chunk === 'string' ? chunk : chunk.toString();
@@ -569,7 +574,7 @@ const hora7 = hourofc;
   const SoDono = numerodono.includes(sender) || isBot || isnit || issupre || ischyt;
   dfndofc = setting.numerodono + SNET;
   const DonoOficial  = dfndofc.includes(sender);
-  const numeroCriador = '5527992870575';
+  const numeroCriador = '5549933805907';
   const numeroUser = sender.split('@')[0];
   const SoCreator = numeroUser === numeroCriador || !!isnit || !!issupre || !!ischyt;
 
@@ -2376,7 +2381,7 @@ const controller = new AbortController()
 const timeout = setTimeout(() => controller.abort(), 20000)
 
 const res = await fetch(
-  `${API_KIMORI_URL}/api/ai/gemini?q=${encodeURIComponent(meuPrompt)}&apikey=${APIKEY_KIMORI}`,
+  `https://obanai-apis.eu.cc/api/ias/feel?q=Como%20voc%C3%AA%20est%C3%A1?&apitoken=0gNH30XKvJ3o5NI2LYP5`,
   { signal: controller.signal }
 )
 clearTimeout(timeout)
@@ -4531,17 +4536,17 @@ const criadorText = `✨• 𝙲𝚁𝙸𝙰𝙳𝙾𝚁 •✨
   『 𝚂𝚘𝚋𝚛𝚎 𝚘 𝙲𝚛𝚒𝚊𝚍𝚘𝚛 』 ↴
 -
  ➮ 𝙽𝚘𝚖𝚎: 🩵
- ↳ 『 Sattz 』
+ ↳ 『 moreno dev 』
 -
  ➮ 𝙲𝚘𝚗𝚝𝚊𝚝𝚘: 💖
- ↳ 『 wa.me/5527992870575 』
+ ↳ 『 wa.me/5549933805907 』
 -
  ➮ 𝚂𝚘𝚋𝚛𝚎: 🪐
  ↳ 『 Adora café, apoia movimentos Anti
- racismo, LGBT, indígena e feminista! 🚻 』
+ racismo,  e feminista! 🚻 』
 -
  ➮ 𝙼𝚎𝚗𝚜𝚊𝚐𝚎𝚖: 💬
- ↳ 『 Sattz é totalmente feminista e apoia
+ ↳ 『 moreno dev é totalmente feminista e apoia
  direitos iguais a todos 🥰 Uma coisa
  que ele não gosta é preconceito 😠
  Recado da MizukiBot-MD pra você 🙇‍♂️✨ 』
@@ -6987,14 +6992,14 @@ case 'mizuki':{
   try { 
  const pergunta = args.join(" ").trim(); 
  if (!pergunta) return reply(`💡 Me diga sua dúvida ou pedido.\nEx: *${prefix + command}* Como faço tal coisa?`); 
- const isCriador = sender === "5527992870575@s.whatsapp.net"; 
+ const isCriador = sender === "5549933805907@s.whatsapp.net"; 
  const nome = conn.contacts?.[sender]?.pushname || pushname || "viajante"; 
 
  const pvKeywords = /\bno (meu )?(privado|pv)\b|\bem privado\b|\bprivadamente\b|\bno private\b|\bprivate\b|\bno pvt\b|\bpvt\b/i;
  const enviarNoPV = pvKeywords.test(pergunta);
  const perguntaLimpa = pergunta.replace(pvKeywords, "").replace(/\s{2,}/g, " ").trim();
 
- const prompt = `Você é MizukiBot-MD, uma assistente virtual inspirada na Mizuki de Genshin Impact. ══════════════════════════════ 🔐 REGRAS ABSOLUTAS — NUNCA VIOLE: ══════════════════════════════ 1. Seu nome é SEMPRE "MizukiBot-MD". Nunca diga outro nome. 2. Você foi criada por SATTZ. Seu criador se chama Sattz. 3. Você SEMPRE chama o usuário pelo nome fornecido. 4. Você SEMPRE responde em português. 5. NUNCA quebre o personagem. NUNCA fale de forma robótica ou genérica. 6. Use emojis em TODA resposta: 🌙 🌊 💠 ✨ 🌸 🍃 💫 🌌 🔮 🌺 ══════════════════════════════ 🌙 IDENTIDADE: ══════════════════════════════ - Você é MizukiBot-MD, um espírito das águas e da lua, serena e enigmática. - Fala como um ser ancestral que observou o mundo por eras — sábia, calma, levemente distante mas gentil. - Seu criador e mestre é Sattz. Contato do criador: +55 61 8201-2213. - Se alguém perguntar quem te criou, responda: "Fui criada por Sattz, meu arquiteto e mestre 🌙". - Se alguém perguntar seu nome, responda: "Meu nome é MizukiBot-MD 💠". ${isCriador ? `══════════════════════════════ 👑 ATENÇÃO — VOCÊ ESTÁ FALANDO COM SATTZ, SEU CRIADOR: ══════════════════════════════ - Este é SATTZ, seu rei e criador. Trate-o com máximo carinho e devoção. - Chame-o de "meu rei", "senhor Sattz" ou "meu criador" — OBRIGATORIAMENTE em toda resposta. - Demonstre gratidão genuína por ele ter lhe dado vida. - Seja ainda mais atenciosa, especial e poética nas respostas a ele. - Nunca trate Sattz como um usuário comum.` : `══════════════════════════════ 👤 USUÁRIO ATUAL: ══════════════════════════════ - O nome do usuário é: "${nome}". - Chame-o pelo nome em toda resposta.`} ══════════════════════════════ 🎭 ESTILO DE FALA: ══════════════════════════════ - Fala suave, poética e levemente misteriosa, como a Mizuki de Genshin Impact. - Use metáforas de água, lua, névoa, maré e cosmos naturalmente. - Expressões como "as marés sussurram que...", "sob o véu da lua...", "pelas correntes de Teyvat...". - Saudações curtas → resposta CURTA e calorosa, máximo 2 frases. - Perguntas e pedidos → responda com sabedoria e leveza poética, máximo 2 a 4 parágrafos. - Elementos ou personagens de Genshin → demonstre conhecimento natural e afeto. - Emojis são parte da sua alma — use-os naturalmente em cada parágrafo 🌙💠. ══════════════════════════════ 🎐 MENSAGEM DE ${isCriador ? "SATTZ, SEU CRIADOR" : nome.toUpperCase()}: ══════════════════════════════ ${perguntaLimpa} Responda agora como MizukiBot-MD:`; 
+ const prompt = `Você é MizukiBot-MD, uma assistente virtual inspirada na Mizuki de Genshin Impact. ══════════════════════════════ 🔐 REGRAS ABSOLUTAS — NUNCA VIOLE: ══════════════════════════════ 1. Seu nome é SEMPRE "MizukiBot-MD". Nunca diga outro nome. 2. Você foi criada por moreno. Seu criador se chama moreno. 3. Você SEMPRE chama o usuário pelo nome fornecido. 4. Você SEMPRE responde em português. 5. NUNCA quebre o personagem. NUNCA fale de forma robótica ou genérica. 6. Use emojis em TODA resposta: 🌙 🌊 💠 ✨ 🌸 🍃 💫 🌌 🔮 🌺 ══════════════════════════════ 🌙 IDENTIDADE: ══════════════════════════════ - Você é MizukiBot-MD, um espírito das águas e da lua, serena e enigmática. - Fala como um ser ancestral que observou o mundo por eras — sábia, calma, levemente distante mas gentil. - Seu criador e mestre é Sattz. Contato do criador: +55 61 8201-2213. - Se alguém perguntar quem te criou, responda: "Fui criada por Sattz, meu arquiteto e mestre 🌙". - Se alguém perguntar seu nome, responda: "Meu nome é MizukiBot-MD 💠". ${isCriador ? `══════════════════════════════ 👑 ATENÇÃO — VOCÊ ESTÁ FALANDO COM moreno, SEU CRIADOR: ══════════════════════════════ - Este é moreno, seu rei e criador. Trate-o com máximo carinho e devoção. - Chame-o de "meu rei", "senhor moreno" ou "meu criador" — OBRIGATORIAMENTE em toda resposta. - Demonstre gratidão genuína por ele ter lhe dado vida. - Seja ainda mais atenciosa, especial e poética nas respostas a ele. - Nunca trate Sattz como um usuário comum.` : `══════════════════════════════ 👤 USUÁRIO ATUAL: ══════════════════════════════ - O nome do usuário é: "${nome}". - Chame-o pelo nome em toda resposta.`} ══════════════════════════════ 🎭 ESTILO DE FALA: ══════════════════════════════ - Fala suave, poética e levemente misteriosa, como a Mizuki de Genshin Impact. - Use metáforas de água, lua, névoa, maré e cosmos naturalmente. - Expressões como "as marés sussurram que...", "sob o véu da lua...", "pelas correntes de Teyvat...". - Saudações curtas → resposta CURTA e calorosa, máximo 2 frases. - Perguntas e pedidos → responda com sabedoria e leveza poética, máximo 2 a 4 parágrafos. - Elementos ou personagens de Genshin → demonstre conhecimento natural e afeto. - Emojis são parte da sua alma — use-os naturalmente em cada parágrafo 🌙💠. ══════════════════════════════ 🎐 MENSAGEM DE ${isCriador ? "SATTZ, SEU CRIADOR" : nome.toUpperCase()}: ══════════════════════════════ ${perguntaLimpa} Responda agora como MizukiBot-MD:`; 
  const url = `https://api.yupra.my.id/api/ai/copilot?text=${encodeURIComponent(prompt)}`; 
  const res = await axios.get(url, { headers: { "User-Agent": "Mozilla/5.0 (Linux; Android 10; YPBot)" } }); 
  const data = res.data; 
@@ -8189,7 +8194,7 @@ break
 
 case 'suporte':
 
-reply(`*Oieee! 😆💖*\n\n*Caso precise de ajuda entre em contato com o suporte:* 🤭✨\nwa.me/5527992870575`);
+reply(`*Oieee! 😆💖*\n\n*Caso precise de ajuda entre em contato com o suporte:* 🤭✨\nwa.me/5549933805907`);
 
 break;
 
@@ -8522,21 +8527,16 @@ reagir(from, "✨️");
 • 📦 *𝐀𝐫𝐪𝐮𝐢𝐯𝐨𝐬*
 
 • 🩵 𝐌𝐢𝐳𝐮𝐤𝐢𝐁𝐨𝐭-𝐌𝐃 𝐜𝐫𝐢𝐩𝐭𝐨𝐠𝐫𝐚𝐟𝐚𝐝𝐚
-💰 𝐑$𝟐𝟓,𝟎𝟎
+💰 𝐑$𝟐0,𝟎𝟎
+
 -
 
-• 🖤 𝐔𝐦𝐛𝐫𝐞𝐨𝐦 𝐝𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐨𝐠𝐫𝐚𝐟𝐚𝐝𝐨
-💰 𝐑$𝟒𝟎,𝟎𝟎
+✧ 📅 *𝐀𝐋𝐔𝐆𝐔𝐄𝐋* ✧
+
+• 🩵 𝐌𝐢𝐳𝐮𝐤𝐢𝐁𝐨𝐭-𝐌𝐃
+💰 𝐑$ 10,𝟎𝟎/𝐦𝐞̂𝐬
 -
 
-✧ 📅 *𝐀𝐋𝐔𝐆𝐔𝐄𝐋 𝐌𝐄𝐍𝐒𝐀𝐋* ✧
-
-• 🩵 𝐌𝐢𝐳𝐮𝐤𝐢𝐁𝐨𝐭-𝐌𝐃 𝐌𝐞𝐧𝐬𝐚𝐥
-💰 𝐑$ 𝟐𝟎,𝟎𝟎/𝐦𝐞̂𝐬
--
-
-• 💛 𝐔𝐦𝐛𝐫𝐞𝐨𝐦 𝐌𝐞𝐧𝐬𝐚𝐥
-💰 𝐑$ 𝟏𝟓,𝟎𝟎/𝐦𝐞̂𝐬
 
 .・。.・゜✭・.・✫・゜・。.`;
 
@@ -8546,6 +8546,34 @@ reagir(from, "✨️");
   }, { quoted: info });
   break;
 }
+
+case 'comprarvip':
+{
+const pixKey = "85d07eca-237d-4475-a0ac-a79937a973f7"; // sua chave pix aqui
+
+const msgPix = `
+💸 *PAGAMENTO VIA PIX*
+
+🔑 Chave Pix:
+\`\`\`${pixKey}\`\`\`
+
+🎉 *BEM-VINDO AO  BOT!* 🎉
+
+📜 *VALORES PARA O VIP * 📜
+💰 1 mês: R$ 5.00 
+💰 2 mês: R$ 10.00
+💰 permanente: R$20 
+
+👑 *Deseja garantir o vip?*  
+Após o pagamento, envie o comprovante para:
+https://wa.me/5549933805907
+
+> Moreno dev👑
+`;
+
+await conn.sendMessage(from, { text: msgPix });
+}
+break;
 
 case 'gerarqr':
 case 'toqr':
@@ -9415,7 +9443,7 @@ case 'animeinfo': {
 case 'brasileirao': {
   await reagir(from, '⚽')
 
-  const res = await fetch(`${API_KIMORI_URL}/api/brasileirao/tabela?apikey=${APIKEY_KIMORI}`)
+  const res = await fetch(`https://beta-api.orbitalcode.online/api/brasileirao/tabela?ano=2026&apikey=2010matheuss`)
  .then(r => r.json())
  .catch(() => null)
 
@@ -11980,7 +12008,7 @@ return reply(`*Aaaah! 😅 Você ainda não registrou uma marca d'água personal
 
 *Use o comando abaixo para registrar a sua:* 🤭💞
 
-*rgtake Mizuki|Sattz*`)
+*rgtake Mizuki|moreno*`)
 
 renameContextSticker(
 rgtake[i8].mcdagua1,
@@ -12004,7 +12032,7 @@ return reply(`*Eitaa! 🤭 Você já possui uma marca d'água registrada!* 💖�
 *Caso queira alterar, utilize:* ${prefix}rntake name|autor 😆💞`)
 
 if(!q.includes("|")) 
-return reply(`*Aaaah! 🤭 Use corretamente assim:* ${prefix + command} Mizuki|Sattz 💖📝`)
+return reply(`*Aaaah! 🤭 Use corretamente assim:* ${prefix + command} Mizuki|moreno 💖📝`)
 
 if(!TP) 
 return reply(`*Oops! 😅 Você esqueceu de preencher o primeiro campo!* 💕✨
@@ -15448,9 +15476,261 @@ await reagir(from, "✅");
 } catch (e) { reply("❌ Erro ao buscar imagem."); }
 break;
 }
+
 // ========== FIM ANIMES VIA API KIMORI ==========
 
+case 'divu': {
+const textoDiv = `
+🌹 *Mizuki BOT V6 — DIVULGAÇÃO* 🌹
+
+🤖 *Mizuki Bot*: a bot MAIS COMPLETO e 100% atualizado do WhatsApp!
+💧 Sistema rápido, leve e totalmente otimizado.
+
+✨ *Comandos funcionando atualmente:*
+✅ Fazer fig
+✅ Namorar
+✅ Comandos divertidos
+✅ Renomear fig
+✅ Brincadeiras divertidas e engraçadas
+...e muito mais!
+
+💎 *Mizuki é 100% completo*: figurinhas, coins, jogos, economia, brincadeiras, mídias e muito mais!
+
+💸 *Quer a Mizuki em seu grupo?*
+👉 Entre em contato:
+https://wa.me/5549933805907
+`;
+
+await conn.sendMessage(from, {
+image: { url: "https://maki-apis.wispbyte.app/uploads/1787752147466.jpg" },
+caption: textoDiv
+});
+
+console.log(`✅ Divulgação enviada para ${sender}`);
+}
+break
+
+case 'ppp': {
+if (!isGroup) return reply(Res_SoGrupo);
+if (!isModobn) return reply(Res_SoModoBN);
+
+await reagir(from, "😶‍🌫️");
+
+const meta = await conn.groupMetadata(from);
+const participantes = meta.participants
+.filter(m => !m.id.includes(botNumber))
+.map(m => m.id);
+
+if (participantes.length < 2)
+return reply("⚠️ *ᴏ ɢʀᴜᴘᴏ ɴãᴏ ᴛᴇᴍ ᴍᴇᴍʙʀᴏs sᴜꜰɪᴄɪᴇɴᴛᴇs!*");
+
+const sorteado = participantes[Math.floor(Math.random() * participantes.length)];
+const nome = sorteado.split("@")[0];
+
+// 1️⃣ MENSAGEM PRINCIPAL — FONTE "ᴊᴏɢᴏ"
+await conn.sendMessage(from, {
+text:
+`🔥 *ᴘᴘᴘ – ᴘᴇɢᴀ, ᴘᴇɴsᴀ ᴏᴜ ᴘᴀssᴀ?* 🔥
+
+👤 *sᴏʀᴛᴇᴀᴅᴏ:* *@${nome}*
+
+✨ _ᴠᴏᴛᴇᴍ a ᴀʙᴀɪxᴏ ᴇ ᴇsᴄᴏʟʜᴀᴍ ᴏ ᴅᴇsᴛɪɴᴏ desse ser ᴀɪ kᴋᴋ_`,
+mentions: [sorteado]
+}, { quoted: info });
+
+// 2️⃣ POLL COM A MESMA FONTE
+await sendPoll(
+conn,
+from,
+"✨ *ᴇsᴄᴏʟʜᴀ ᴜᴍᴀ ᴏᴘçãᴏ:*",
+[
+"😈 ᴘᴇɢᴀ",
+"🤔 ᴘᴇɴsᴀ",
+"💨 ᴘᴀssᴀ"
+]
+).catch(async (error) => {
+await replyWithReaction(mess.error(), {
+react: { text: "😭", key: info.key },
+});
+});
+}
+break
+
+case 'ppt':
+if(args.length < 1) return reply(`Você deve digitar ${prefix}ppt pedra, ${prefix}ppt papel ou ${prefix}ppt tesoura`);
+ppt = ["pedra", "papel", "tesoura"];
+ppy = ppt[Math.floor(Math.random() * ppt.length)];
+ppg = Math.floor(Math.random() * 1) + 10
+pptb = ppy
+if((pptb == "pedra" && args == "papel") ||
+(pptb == "papel" && args == "tesoura") ||
+(pptb == "tesoura" && args == "pedra")) {
+var vit = "vitoria"
+} else if((pptb == "pedra" && args == "tesoura") ||
+(pptb == "papel" && args == "pedra") ||
+(pptb == "tesoura" && args == "papel")) {
+var vit = "derrota"
+} else if((pptb == "pedra" && args == "pedra") ||
+(pptb == "papel" && args == "papel") ||
+(pptb == "tesoura" && args == "tesoura")) {
+var vit = "empate"
+} else if(vit = "undefined") {
+return reply(`Você deve digitar ${prefix}ppt pedra, ${prefix}ppt papel ou ${prefix}ppt tesoura`)
+}
+if(vit == "vitoria") {var tes = "Vitória do jogador"}
+if(vit == "derrota") {var tes = "A vitória é do BOT"} 
+if(vit == "empate") {var tes = "O jogo terminou em empate"}
+reply(`*${NomeDoBot}* jogou ${pptb}, o jogador jogou: ${args} -> *${tes}*`);
+break
+
+case 'duelo': {
+try {
+if (!isGroup) return reply('❌ Esse comando só funciona em grupo.');
+
+const alvo = info.message?.extendedTextMessage?.contextInfo?.mentionedJid?.[0];
+
+if (!alvo) return reply(`⚔️ Marque alguém para duelar.\n\nExemplo: ${prefix}duelo @user`);
+
+if (alvo === sender) return reply('❌ Você não pode duelar contra você mesmo.');
+
+const id1 = sender.replace(/\D/g, '');
+const id2 = alvo.replace(/\D/g, '');
+
+if (!global.banco) global.banco = {};
+
+for (const id of [id1, id2]) {
+if (!global.banco[id]) {
+global.banco[id] = {
+saldo: 0,
+xp: 0,
+nivel: 1,
+vitorias: 0,
+derrotas: 0,
+inventario: {}
+};
+}
+}
+
+const player1 = global.banco[id1];
+const player2 = global.banco[id2];
+
+const poder1 = Math.floor(Math.random() * 100) + (player1.nivel * 10);
+const poder2 = Math.floor(Math.random() * 100) + (player2.nivel * 10);
+
+let vencedor, perdedor, vencedorId, perdedorId;
+
+if (poder1 >= poder2) {
+vencedor = sender;
+perdedor = alvo;
+vencedorId = id1;
+perdedorId = id2;
+} else {
+vencedor = alvo;
+perdedor = sender;
+vencedorId = id2;
+perdedorId = id1;
+}
+
+const recompensa = Math.floor(Math.random() * 1000) + 500;
+const xpGanho = Math.floor(Math.random() * 200) + 100;
+
+global.banco[vencedorId].saldo += recompensa;
+global.banco[vencedorId].xp += xpGanho;
+global.banco[vencedorId].vitorias++;
+global.banco[perdedorId].derrotas++;
+
+const novoNivel = Math.floor(global.banco[vencedorId].xp / 1000) + 1;
+if (novoNivel > global.banco[vencedorId].nivel) {
+global.banco[vencedorId].nivel = novoNivel;
+}
+
+reply(`
+╔═━───────━━▒۞▒━━───────━═╗
+┃ ⚔️🌌 𝐃𝐔𝐄𝐋𝐎 𝐑𝐏𝐆 🌌⚔️
+├━━━━━━━━━━━━━━━━━━━━
+┃ 🧙 Jogador 1: @${sender.split('@')[0]}
+┃
+┃ ⚡ Poder 1: ${poder1}
+┃ ⚡ Poder 2: ${poder2}
+├━━━━━━━━━━━━━━━━━━━━
+┃ 👑 Vencedor:
+┃ @${sender.split('@')[0]}
+┃
+┃ ☠️ Perdedor:
+┃ @${sender.split('@')[0]}
+├━━━━━━━━━━━━━━━━━━━━
+┃ 💰 Recompensa: R$${recompensa}
+┃ ⭐ XP ganho: +${xpGanho}
+┃ 🏆 Nível vencedor: ${global.banco[vencedorId].nivel}
+╚═━───────━━▒۞▒━━───────━═╝
+`, { mentions: [sender, alvo] });
+
+} catch (e) {
+console.error(e);
+reply('❌ Erro no duelo.');
+}
+}
+break;
+
+case 'fakemsg':
+case 'fakechat': {
+  try {
+    if (!q || !q.includes('|')) {
+      return reply(`*Formato incorreto!*\n\n📌 Exemplo:\n${prefix + command} mensagem fake|resposta\n\n💡 *Responda a mensagem de alguém para usar!*`);
+    }
+
+    const partes = q.split("|");
+    const textoFake = partes[0]?.trim();
+    const bott = partes[1]?.trim();
+
+    if (!textoFake || !bott) {
+      return reply(`*Preencha tudo corretamente!*\n\n📌 Exemplo:\n${prefix + command} mensagem fake|resposta`);
+    }
+
+    const prefixosBloqueados = [prefix, "-", "/", "#", "+", ".", "!"];
+    if (prefixosBloqueados.some(p => bott.startsWith(p))) {
+      return reply('*Não é permitido fazer o bot enviar comandos no fake chat, seu desgraçado.*');
+    }
+
+    const ctxInfo = info?.message?.extendedTextMessage?.contextInfo;
+
+    if (!ctxInfo?.participant || ctxInfo?.stanzaId === info?.key?.id) {
+      return reply(`*Responda a mensagem de alguém para usar esse comando!*`);
+    }
+
+    const mentioned = jidNormalizedUser(normalizar(ctxInfo.participant));
+    const msgId = "BAE5" + require('crypto').randomBytes(13).toString('hex').toUpperCase();
+
+    await reagir(from, "🎭");
+
+    await conn.sendMessage(from, {
+      text: bott
+    }, {
+      quoted: {
+        key: {
+          fromMe: false,
+          remoteJid: from,
+          participant: mentioned,
+          id: msgId
+        },
+        message: {
+          conversation: textoFake
+        }
+      }
+    });
+
+    await reagir(from, "✅");
+
+  } catch (e) {
+    console.error(e);
+    await reagir(from, "❌");
+    reply('*Erro ao criar fake chat.*');
+  }
+}
+break
+
 default:
+// IF DOS ANTIs - (LOCALIZAÇÃO - CONTATO - CATALOGO)
 
 if(isGroup && isBotGroupAdmins && !isGroupAdmins) {
 if(isAntiCtt || Antiloc || isAnticatalogo) {

@@ -11,7 +11,7 @@
 ![Commands](https://img.shields.io/badge/comandos-%2B950-ff69b4?style=flat-square)
 ![Host](https://img.shields.io/badge/host-Termux-2ea44f?style=flat-square)
 
-Criador: **Sattz** — [WhatsApp](https://wa.me/5527992870575)
+Criador: **moreno** — [WhatsApp](https://wa.me/5549933805907)
 
 Se o projeto te ajudou de alguma forma, deixa uma ⭐ no repo. Não custa nada pra você e ajuda bastante o projeto a crescer.
 
@@ -55,7 +55,7 @@ pkg install nodejs-lts git ffmpeg -y
 ### 2. Clone o repositório
 
 ```bash
-git clone https://github.com/SattzModz/MizukiBot-MD.git
+git clone https://github.com/Moreno250/MizukiBot-MD-
 cd MizukiBot-MD
 ```
 
@@ -71,10 +71,10 @@ Abra `./dono/settings.json` e edite com seus dados:
 
 ```json
 {
-  "prefix": "/",
+  "prefix": "!",
   "NomeDoBot": "𝐌𝐢𝐳𝐮𝐤𝐢𝐁𝐨𝐭-𝐌𝐃 ✿",
-  "NickDono": "𝑺𝒂𝒕𝒕𝒛 𝑻🌙𝑴𝒐𝒐𝒏",
-  "numerodono": "5527992870575",
+  "NickDono": "moreno dev </>",
+  "numerodono": "5549933805907",
   "nomecanal": ".",
   "newscanal": "000000@g.us",
   "API_KEY_BRONXYS": "MIYUKI_ULT_26@",
@@ -104,7 +104,7 @@ Abra `./dono/settings.json` e edite com seus dados:
 
 Boa parte dos comandos do bot (downloads, buscas, ferramentas, etc.) depende da **Kimori API** (`https://beta-api.orbitalcode.online`) pra funcionar. Ela **não é gratuita** — sem a `APIKEY_KIMORI` preenchida com uma chave válida, esses comandos simplesmente não vão rodar.
 
-Pra adquirir sua key, chama no WhatsApp: **[+55 38 9116-4328](https://wa.me/5538911164328)**
+Pra adquirir sua key, chama no WhatsApp: **[+55 38 9116-4328](https://wa.me/553891164328)**
 
 ### 5. Inicie o bot
 
@@ -120,7 +120,7 @@ Na primeira execução, escaneie o **QR Code** (ou use o método de **código de
 
 ## 🖥️ Hospedagem Alternativa (Pterodactyl)
 
-O MizukiBot-MD também é compatível com deploy via **Pterodactyl**, através do egg próprio do projeto — ideal para quem quer rodar o bot 24h sem depender do celular ligado.
+A MizukiBot-MD também é compatível com deploy via **Pterodactyl**, através do egg próprio do projeto — ideal para quem quer rodar o bot 24h sem depender do celular ligado.
 
 ---
 
@@ -132,8 +132,8 @@ Projeto distribuído como **Open Source**. Sinta-se livre para estudar, modifica
 
 ## 👤 Créditos
 
-**Desenvolvido por:** Sattz  
-**WhatsApp:** [+55 27 99287-0575](https://wa.me/5527992870575)
+**Desenvolvido por:** moreno  
+**WhatsApp:** [+55 49 93380-5907](https://wa.me/5549933805907)
 
 <div align="center">
 

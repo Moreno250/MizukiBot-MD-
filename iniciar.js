@@ -30,7 +30,7 @@ const { banner2, banner3, colors, nescessario, setting, countMessage } = require
 const QR_CODE_PATH   = './banco de dados/qrcode';
 const COUNTMSG_PATH  = './banco de dados/countmsg.json';
 const GRUPOS_DIR     = './banco de dados/grupos';
-const SUPORTE_NUM    = '5527992870575';
+const SUPORTE_NUM    = '5549933805907';
 const WA_VERSION     = [2, 3000, 1044006379];
 
 const DDD_MAP = {

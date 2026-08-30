@@ -127,5 +127,5 @@ npm start
 
 ---
 
-✨ BY: Sattz Skirov
+✨ BY: moreno dev
 */

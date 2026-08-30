@@ -24,14 +24,14 @@
     "listanegra": [],
     "advertir": [],
     "prefixos": [
-      "!"
+      "&"
     ],
     "advertir2": [],
     "legenda_estrangeiro": "0",
     "legenda_documento": "0",
     "legenda_video": "0",
     "legenda_imagem": "0",
-    "multiprefix": false,
+    "multiprefix": true,
     "forca_ofc": [
       {
         "acertos": 0,
@@ -71,6 +71,7 @@
     "jogos": false,
     "level": false,
     "bangp": false,
-    "nsfw": false
+    "nsfw": false,
+    "modoia": false
   }
 ]

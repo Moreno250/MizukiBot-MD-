@@ -145,6 +145,60 @@
           "cassino": 0,
           "minerar": 0
         }
+      },
+      {
+        "id": "5549933805907@s.whatsapp.net",
+        "coins": 40,
+        "data": "26/08/2026",
+        "chances": {
+          "cassino": 2,
+          "minerar": 0
+        }
+      },
+      {
+        "id": "5511986059638@s.whatsapp.net",
+        "coins": 745,
+        "data": "26/08/2026",
+        "chances": {
+          "cassino": 5,
+          "minerar": 6
+        }
+      },
+      {
+        "id": "556281344342@s.whatsapp.net",
+        "coins": 50,
+        "data": "26/08/2026",
+        "chances": {
+          "cassino": 0,
+          "minerar": 0
+        }
+      },
+      {
+        "id": "553172461221@s.whatsapp.net",
+        "coins": 50,
+        "data": "26/08/2026",
+        "chances": {
+          "cassino": 0,
+          "minerar": 0
+        }
+      },
+      {
+        "id": "639755977005@s.whatsapp.net",
+        "coins": 50,
+        "data": "26/08/2026",
+        "chances": {
+          "cassino": 0,
+          "minerar": 0
+        }
+      },
+      {
+        "id": "559291035726@s.whatsapp.net",
+        "coins": 50,
+        "data": "26/08/2026",
+        "chances": {
+          "cassino": 0,
+          "minerar": 0
+        }
       }
     ]
   }

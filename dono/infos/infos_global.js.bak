@@ -739,6 +739,21 @@ global.Msg_PrintSite = `✨   • 𝙿𝚁𝙸𝙽𝚃 𝙳𝙴 𝚂𝙸𝚃𝙴
 -
 ⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
 
+
+exports.atividade = (u) => {
+return `╭─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───
+├─ ⊹°♱𝚄𝚂𝙴𝚁: @${u.id.split('@')[0]}
+├─ ⊹°♱𝙼𝚂𝙶: ${u.messages}
+├─ ⊹°♱𝙲𝙾𝙽𝙽𝙴𝙲𝚃: ${u.aparelho}
+├─ ⊹°♱𝙵𝙸𝙶: ${u.figus}
+├─ ⊹°♱𝙲𝙼𝙳: ${u.cmd_messages}
+├─ ⊹°♱𝚅𝙸𝙳𝙴𝙾: ${u.videos || 0}
+├─ ⊹°♱𝙸𝙼𝙶: ${u.imagens || 0}
+├─ ⊹°♱𝙰𝚄𝙳𝙸𝙾: ${u.audios || 0}
+├─ ⊹°♱𝙳𝙾𝙲: ${u.documentos || 0}
+╰─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───\n\n`;
+}
+
 module.exports = {
 infobancarac, infolistanegra, infopalavrao, infobemvindo, infocontador, infosorteio, cmd_termux, infoduelo, idiomagtts, infotransmitir, infoaluguel, anotacao
 };
