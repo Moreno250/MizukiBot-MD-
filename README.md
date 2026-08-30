@@ -56,16 +56,20 @@ pkg install nodejs-lts git ffmpeg -y
 
 ```bash
 git clone https://github.com/Moreno250/MizukiBot-MD-
+```
+### 4. entre na pasta do bot
+
+```bash
 cd MizukiBot-MD
 ```
 
-### 3. Instale os pacotes do bot
+### 5. Instale os pacotes do bot
 
 ```bash
 npm install
 ```
 
-### 4. Configure o bot
+### 6. Configure o bot
 
 Abra `./dono/settings.json` e edite com seus dados:
 
