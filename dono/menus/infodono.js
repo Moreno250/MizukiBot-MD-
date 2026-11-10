@@ -6,7 +6,7 @@ const infodono = (prefix, numerodn, NomeDoBot, sender) => {
 return `🩵𝐎𝐢𝐞𝐞𝐞 @${sender.split("@")[0]} 𝐄𝐮 𝐒𝐨𝐮 𝐚 𝐌𝐢𝐳𝐮𝐤𝐢
 
 👑𝐄𝐬𝐬𝐞 𝐞́ 𝐨 𝐦𝐞𝐮 𝐝𝐨𝐧𝐨 wa.me/${numerodn} 
-💋𝐌𝐞𝐮 𝐂𝐫𝐢𝐚𝐝𝐨𝐫 𝐞́ 𝐨 𝐒𝐚𝐭𝐭𝐳
+💋𝐌𝐞𝐮 𝐂𝐫𝐢𝐚𝐝𝐨𝐫 𝐞́ 𝐨 moreno
 > © Direitos ressrvados a Mizuki Supremacy`
 }
 

@@ -1,0 +1,18 @@
+[
+  {
+    "cmdSemPrefixo": "b",
+    "comandoOriginal": "ban"
+  },
+  {
+    "cmdSemPrefixo": "t",
+    "comandoOriginal": "take"
+  },
+  {
+    "cmdSemPrefixo": "d",
+    "comandoOriginal": "del"
+  },
+  {
+    "cmdSemPrefixo": "fig",
+    "comandoOriginal": "s"
+  }
+]

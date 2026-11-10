@@ -1,4 +1,3 @@
-
 const { 
 "default": makeWASocket,
 downloadContentFromMessage, 
@@ -155,7 +154,7 @@ function upload(midia) {
       form.append('reqtype', 'fileupload');
       form.append('fileToUpload', midia, 'tmp.' + ext);
 
-      await fetch('https://catbox.moe/user/api.php', {
+      await fetch('https://uploads.zero-two-apis.store/', {
         method: 'POST',
         body: form
       })

@@ -1,0 +1,22 @@
+{
+  "5549933805907@s.whatsapp.net": {
+    "nome": "Clobbopus",
+    "level": 5,
+    "xp": 0,
+    "atk": 68,
+    "def": 60,
+    "hp": 50,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/852.png",
+    "capturadoEm": 1790088825865
+  },
+  "554998268732@s.whatsapp.net": {
+    "nome": "Excadrill",
+    "level": 5,
+    "xp": 0,
+    "atk": 135,
+    "def": 60,
+    "hp": 110,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/530.png",
+    "capturadoEm": 1790089799520
+  }
+}

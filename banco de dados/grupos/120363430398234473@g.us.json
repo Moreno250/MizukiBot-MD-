@@ -1,0 +1,133 @@
+[
+  {
+    "name": "☆࿐ཽ༵༆༒ 𐒀Ꭶ paranóicos ԃσʂ ᏃϴᎠᏆ́ᎪᏟϴ ༒༆࿐ཽ༵☆",
+    "groupId": "120363430398234473@g.us",
+    "x9": false,
+    "antiporn": false,
+    "antiimg": false,
+    "antivideo": false,
+    "antiaudio": false,
+    "antisticker": false,
+    "antidoc": false,
+    "antictt": false,
+    "antiloc": false,
+    "antilinkgp": false,
+    "antilinkhard": true,
+    "antifake": false,
+    "Odelete": false,
+    "antinotas": false,
+    "anticatalogo": false,
+    "sistemGold": false,
+    "visuUnica": false,
+    "registrarFIGUS": false,
+    "soadm": false,
+    "rg_aluguel": false,
+    "listanegra": [
+      "557781423334",
+      "5527981435579",
+      "556593007436",
+      "19709004163",
+      "558598255648",
+      "56959413415",
+      "558386322504",
+      "559591389063",
+      "5521959574541",
+      "5521988763041"
+    ],
+    "advertir": [
+      "153795044610285@lid",
+      "16750926147714@lid",
+      "47799362162867@lid"
+    ],
+    "prefixos": [
+      "!"
+    ],
+    "advertir2": [],
+    "legenda_estrangeiro": "0",
+    "legenda_documento": "0",
+    "legenda_video": "0",
+    "legenda_imagem": "0",
+    "multiprefix": false,
+    "forca_ofc": [
+      {
+        "acertos": 0,
+        "erros": 0,
+        "palavra": [],
+        "escreveu": [],
+        "palavra_ofc": 0,
+        "dica": 0,
+        "tema": 0
+      }
+    ],
+    "minerar_gold": [],
+    "ausentes": [
+      {
+        "id": "5511970446228@s.whatsapp.net",
+        "msg": "ninando"
+      },
+      {
+        "id": "553588008728@s.whatsapp.net",
+        "msg": "sla. Fui me matar ali"
+      },
+      {
+        "id": "558598031118@s.whatsapp.net",
+        "msg": "comendo pudim"
+      },
+      {
+        "id": "558293364824@s.whatsapp.net",
+        "msg": "\"cagando\""
+      },
+      {
+        "id": "556181599707@s.whatsapp.net",
+        "msg": "morta"
+      }
+    ],
+    "forca_inc": false,
+    "antipalavrao": {
+      "active": false,
+      "palavras": []
+    },
+    "limitec": {
+      "active": false,
+      "quantidade": null
+    },
+    "wellcome": [
+      {
+        "bemvindo1": false,
+        "legendabv": "🤖: Bem-vindo(a) #numerodele#, esperamos que aproveite e participe no grupo. também não esqueça de ler as regras na descrição e as cumpra!",
+        "legendasaiu": "🤖: @#numerodele# saiu do grupo, agradeço pela participação e pelos bons momentos que tivemos por aqui. esperamos te ver de volta em breve!"
+      },
+      {
+        "bemvindo2": true,
+        "legendabv": "Olá #numerodele#, seja bem vindo (a)",
+        "legendasaiu": "#numerodele# – Saiu do grupo: #nomedogp#"
+      }
+    ],
+    "autosticker": true,
+    "autoresposta": false,
+    "jogos": true,
+    "level": false,
+    "bangp": false,
+    "nsfw": false,
+    "isModoCoins": true,
+    "antispam": {
+      "active": true,
+      "figu": {
+        "limite": 4,
+        "tempo": 10
+      },
+      "texto": {
+        "limite": 8,
+        "tempo": 8
+      },
+      "foto": {
+        "limite": 4,
+        "tempo": 10
+      },
+      "video": {
+        "limite": 3,
+        "tempo": 15
+      }
+    }
+  }
+]

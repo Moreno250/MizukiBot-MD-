@@ -8,7 +8,76 @@
       "filhos": [
         "556199452750@s.whatsapp.net"
       ]
+    },
+    "5511969499095@s.whatsapp.net_5514997482594@s.whatsapp.net__120363430398234473@g.us": {
+      "a": "5511969499095@s.whatsapp.net",
+      "b": "5514997482594@s.whatsapp.net",
+      "grupo": "120363430398234473@g.us",
+      "criadoEm": 1791150970675,
+      "filhos": [
+        "558699331186@s.whatsapp.net"
+      ]
+    },
+    "5521979821644@s.whatsapp.net_5521986114493@s.whatsapp.net__120363430689422678@g.us": {
+      "a": "5521986114493@s.whatsapp.net",
+      "b": "5521979821644@s.whatsapp.net",
+      "grupo": "120363430689422678@g.us",
+      "criadoEm": 1791767352492,
+      "filhos": []
+    },
+    "5511918917037@s.whatsapp.net_556181599707@s.whatsapp.net__120363430398234473@g.us": {
+      "a": "556181599707@s.whatsapp.net",
+      "b": "5511918917037@s.whatsapp.net",
+      "grupo": "120363430398234473@g.us",
+      "criadoEm": 1793635370322,
+      "filhos": [
+        "558598031118@s.whatsapp.net",
+        "558494762638@s.whatsapp.net",
+        "559591154993@s.whatsapp.net",
+        "5519982864720@s.whatsapp.net",
+        "554788469215@s.whatsapp.net",
+        "557998386542@s.whatsapp.net",
+        "553588008728@s.whatsapp.net",
+        "557599814002@s.whatsapp.net"
+      ]
+    },
+    "5511951685410@s.whatsapp.net_5511969499095@s.whatsapp.net__120363430398234473@g.us": {
+      "a": "5511969499095@s.whatsapp.net",
+      "b": "5511951685410@s.whatsapp.net",
+      "grupo": "120363430398234473@g.us",
+      "criadoEm": 1793809779329,
+      "filhos": [
+        "559184343366@s.whatsapp.net",
+        "5511967631594@s.whatsapp.net",
+        "558293364824@s.whatsapp.net",
+        "558496666418@s.whatsapp.net",
+        "557399375648@s.whatsapp.net"
+      ]
+    },
+    "5519982864720@s.whatsapp.net_559184343366@s.whatsapp.net__120363430398234473@g.us": {
+      "a": "559184343366@s.whatsapp.net",
+      "b": "5519982864720@s.whatsapp.net",
+      "grupo": "120363430398234473@g.us",
+      "criadoEm": 1794070933152,
+      "filhos": [
+        "557382368241@s.whatsapp.net"
+      ]
     }
   },
-  "pend": {}
+  "pend": {
+    "556699413831@s.whatsapp.net": {
+      "familyId": "5521979821644@s.whatsapp.net_5521986114493@s.whatsapp.net__120363430689422678@g.us",
+      "grupo": "120363430689422678@g.us",
+      "alvo": "556699413831@s.whatsapp.net",
+      "por": "5521986114493@s.whatsapp.net",
+      "criadoEm": 1791767578050
+    },
+    "5521988763041@s.whatsapp.net": {
+      "familyId": "5511918917037@s.whatsapp.net_556181599707@s.whatsapp.net__120363430398234473@g.us",
+      "grupo": "120363430398234473@g.us",
+      "alvo": "5521988763041@s.whatsapp.net",
+      "por": "556181599707@s.whatsapp.net",
+      "criadoEm": 1794164701280
+    }
+  }
 }

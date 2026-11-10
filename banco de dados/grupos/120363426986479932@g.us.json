@@ -10,9 +10,9 @@
     "antidoc": false,
     "antictt": false,
     "antiloc": false,
-    "antilinkgp": false,
-    "antilinkhard": false,
-    "antifake": false,
+    "antilinkgp": true,
+    "antilinkhard": true,
+    "antifake": true,
     "Odelete": false,
     "antinotas": false,
     "anticatalogo": false,
@@ -21,8 +21,27 @@
     "registrarFIGUS": false,
     "soadm": false,
     "rg_aluguel": false,
-    "listanegra": [],
-    "advertir": [],
+    "listanegra": [
+      "558182944844",
+      "553492096768",
+      "351924151349",
+      "3492096768",
+      "5524988300998",
+      "351962882402",
+      "553492401599",
+      "351963499782",
+      "5521996326051"
+    ],
+    "advertir": [
+      null,
+      "91805647401117@lid",
+      "140497205096539@lid",
+      "219469423100076@lid",
+      "238702135607342@lid",
+      "140497205096539@lid",
+      null,
+      "239796630888606@lid"
+    ],
     "prefixos": [
       "!"
     ],
@@ -57,20 +76,44 @@
     "wellcome": [
       {
         "bemvindo1": false,
-        "legendabv": "🤖: Bem-vindo(a) #numerodele#, esperamos que aproveite e participe no grupo. também não esqueça de ler as regras na descrição e as cumpra!",
+        "legendabv": "𝐑𝐄𝐆𝐑𝐀𝐒 𝐃𝐎 𝐆𝐑𝐔𝐏𝐎 𝐎𝐅𝐈𝐂𝐈𝐀𝐋\n\n𝑴𝑰𝒁𝑼𝑲𝑰'𝑺 𝑷𝒓𝒆𝒇𝒊𝒙\n\n【❕】 𝑴𝒊𝒛𝒖𝒌𝒊 𝑶𝑭𝑪 𝒗6 🟡 𝑶𝒏-𝑳𝒊𝒏𝒆\n【✔】 𝑴𝒊𝒛𝒖𝒌𝒊 𝑶𝑭𝑪 𝒗5 🔴 𝑶𝒇𝒇-𝑳𝒊𝒏𝒆\n︶︶︶︶︶︶︶︶︶︶︶︶︶\n\n【❀】 𝑴𝒊𝒛𝒖𝒌𝒊 𝑶𝒇𝒄 é 𝒂 𝒐𝒓𝒊𝒈𝒊𝒏𝒂𝒍 𝒄𝒐𝒎 𝒃𝒐𝒕õ𝒆𝒔\n【❀】 𝑴𝒊𝒛𝒖𝒌𝒊 à 𝒎𝒊𝒛𝒖𝒌𝒊 𝒔𝒆𝒎 𝒃𝒐𝒕õ𝒆𝒔 𝒄𝒐𝒎 𝒃𝒂𝒊𝒍𝒆𝒚𝒔 𝒂𝒕𝒖𝒂𝒍𝒊𝒛𝒂𝒅𝒂 𝒇𝒆𝒊𝒕𝒂 𝒑𝒂𝒓𝒂 𝒕𝒆𝒔𝒕𝒂𝒓 𝒔𝒊𝒔𝒕𝒆𝒎𝒂𝒔\n𝒆 𝒊𝒏𝒗𝒆𝒏çõ𝒆𝒔 𝒎𝒂𝒍𝒖𝒄𝒂𝒔\n\n꧁༺༻꧂꧁༺༻꧂꧁༺༻꧂\n\n𝑪𝑯𝑨𝑵𝑵𝑬𝑳 ❱ https://whatsapp.com/channel/0029VbCmmu9EwEjoc5iu9s1e\n\nꨄ 𝑹𝑬𝑮𝑹𝑨𝑺 ꨄ\n\n|【❀】 𝑷𝒓𝒐𝒊𝒃𝒊𝒅𝒐 𝑩𝑶𝑻𝒔 𝒏ã𝒐 𝒂𝒖𝒕𝒐𝒓𝒊𝒛𝒂𝒅𝒐𝒔\n|【❀】 𝑷𝒓𝒐𝒊𝒃𝒊𝒅𝒐 𝒒𝒖𝒂𝒍𝒒𝒖𝒆𝒓 𝒕𝒊𝒑𝒐 𝒅𝒆 𝒑𝒐𝒓𝒏𝒐𝒈𝒓𝒂𝒇𝒊𝒂\n|【❀】 𝑭𝒍𝒐𝒐𝒅𝒔/𝑳𝒊𝒏𝒌𝒔/𝑺𝒑𝒂𝒎 𝑺ã𝒐 𝑷𝒓𝒐𝒊𝒃𝒊𝒅𝒐𝒔/𝒊𝒓 𝒏𝒐 𝒑𝒗 𝒔𝒆𝒎 𝒑𝒆𝒓𝒎𝒊𝒔𝒔ã𝒐\n|【❀】 𝑷𝒓𝒐𝒊𝒃𝒊𝒅𝒐 𝒒𝒖𝒂𝒍𝒒𝒖𝒆𝒓 𝒅𝒊𝒗𝒖𝒍𝒈𝒂çã𝒐\n|【❀】 𝑹𝒆𝒔𝒑𝒆𝒊𝒕𝒐 𝒎á𝒙𝒊𝒎𝒐 é 𝒂𝒃𝒔𝒐𝒍𝒖𝒕𝒐 𝒂 𝑻𝒐𝒅☆𝑺\n|【❀】 𝑹𝒆𝒔𝒑𝒆𝒊𝒕𝒐 𝒂𝒐𝒔 𝒂𝒅𝒎𝒊𝒏𝒊𝒔𝒕𝒓𝒂𝒅𝒐𝒓𝒆𝒔\n|【❀】 𝒇𝒐𝒕𝒐𝒔 𝒔ó 𝒆𝒎 𝒗𝒊𝒔 ú𝒏𝒊𝒄𝒂\n\n-\n\n☆ﾟ･* 𝑨𝑳𝑰𝑨𝑵Ç𝑨 𝑨𝒁 *ﾟ･☆\n\n✧･ﾟ— 𝑬𝒏𝒒𝒖𝒂𝒏𝒕𝒐 𝒂 𝑨𝒁 𝒆𝒙𝒊𝒔𝒕𝒊𝒓, 𝒐 𝒄𝒂𝒐𝒔 𝒋𝒂𝒎𝒂𝒊𝒔 𝒕𝒆𝒓á 𝒇𝒊𝒎. 🇦🇱\n\n└──➤ https://alliance-az.yuta-apis.xyz/\n\n𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 - 𝒎𝒐𝒓𝒆𝒏𝒐\n\n#numerodele#",
         "legendasaiu": "🤖: @#numerodele# saiu do grupo, agradeço pela participação e pelos bons momentos que tivemos por aqui. esperamos te ver de volta em breve!"
       },
       {
-        "bemvindo2": false,
-        "legendabv": "Olá #numerodele#, seja bem vindo (a)",
+        "bemvindo2": true,
+        "legendabv": "bem vindo (a) ao ⏤͟͟͞͞𝘾𝙝𝙖𝙩୨ - ୧𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝐌𝐃 ✿˃ 𖥦 ˂\n\n #numerodele#",
         "legendasaiu": "#numerodele# – Saiu do grupo: #nomedogp#"
       }
     ],
     "autosticker": false,
-    "autoresposta": false,
-    "jogos": false,
+    "autoresposta": true,
+    "jogos": true,
     "level": false,
     "bangp": false,
-    "nsfw": false
+    "nsfw": false,
+    "antispam": {
+      "active": true,
+      "figu": {
+        "limite": 6,
+        "tempo": 10
+      },
+      "texto": {
+        "limite": 8,
+        "tempo": 8
+      },
+      "foto": {
+        "limite": 4,
+        "tempo": 10
+      },
+      "video": {
+        "limite": 3,
+        "tempo": 15
+      }
+    },
+    "antimention": true,
+    "isModoCoins": false,
+    "modoia": true,
+    "antipagamento": true,
+    "anticanal": false
   }
 ]

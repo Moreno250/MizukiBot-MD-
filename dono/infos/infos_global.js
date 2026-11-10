@@ -51,7 +51,7 @@ _-_-_-_-_-_-_-_-_
 
 Para saber como instalar o termux e da os comandos, veja esse site:
 
-https://github.com/SattzModz/MizukiBot-MD- `
+https://github.com/Moreno250/MizukiBot-MD- `
 ;
 };
 
@@ -196,7 +196,7 @@ global.Msg_InfoBot = `✨   • 𝙸𝙽𝙵𝙾 𝙱𝙾𝚃 •   ✨
     ↳ 『 #nickdono# — #numerodono# 』
 -
     ➮ 𝙲𝚛𝚒𝚊𝚍𝚘𝚛: 🌸
-    ↳ 『 Sattz | 5527992870575 』
+    ↳ 『 moreno dev | 5549933805907 』
 -
 ⏤͟͟͞͞𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝑴𝑫 🌙`
 

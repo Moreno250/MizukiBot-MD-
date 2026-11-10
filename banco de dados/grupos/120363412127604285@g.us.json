@@ -1,0 +1,49 @@
+[
+  {
+    "antifake": false,
+    "legenda_estrangeiro": "❌ *Números estrangeiros não são permitidos neste grupo!*",
+    "listanegra": [],
+    "ANTI_DDD": {
+      "active": false,
+      "listaProibidos": []
+    },
+    "wellcome": [
+      {
+        "bemvindo1": false,
+        "legendabv": null,
+        "legendasaiu": 0
+      },
+      {
+        "bemvindo2": true,
+        "legendabv": "Opa  🫦*#numerodele#* , seja bem vindo (a) ao grupo *#nomedogp#* , leia as regras , se divirta e use nosso Bot : 🤭\n\nSe apresente com:\n\n-  📝Nome \n- 🫦Foto \n- 😑Idade \n- 🔍Solteiro(a)? (Sim) (Não).",
+        "legendasaiu": 0
+      }
+    ],
+    "multiprefix": false,
+    "prefixos": [
+      "!"
+    ],
+    "autoresposta": true,
+    "antispam": {
+      "active": true,
+      "figu": {
+        "limite": 6,
+        "tempo": 10
+      },
+      "texto": {
+        "limite": 8,
+        "tempo": 8
+      },
+      "foto": {
+        "limite": 4,
+        "tempo": 10
+      },
+      "video": {
+        "limite": 3,
+        "tempo": 15
+      }
+    },
+    "antimention": true,
+    "jogos": true
+  }
+]
