@@ -98,6 +98,7 @@
     "usuario": "5549933805907@s.whatsapp.net",
     "mcdagua1": "moreno",
     "mcdagua2": "dev"
+<<<<<<< HEAD
   },
   {
     "usuario": "558592039551@s.whatsapp.net",
@@ -393,5 +394,7 @@
     "usuario": "556876013128@s.whatsapp.net",
     "mcdagua1": "mizuki",
     "mcdagua2": "bot"
+=======
+>>>>>>> origin/main
   }
 ]

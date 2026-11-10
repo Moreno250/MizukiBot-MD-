@@ -148,7 +148,11 @@
       },
       {
         "id": "5549933805907@s.whatsapp.net",
+<<<<<<< HEAD
         "coins": 300,
+=======
+        "coins": 40,
+>>>>>>> origin/main
         "data": "26/08/2026",
         "chances": {
           "cassino": 2,
@@ -199,6 +203,7 @@
           "cassino": 0,
           "minerar": 0
         }
+<<<<<<< HEAD
       }
     ]
   },
@@ -5305,6 +5310,8 @@
           "cassino": 0,
           "minerar": 0
         }
+=======
+>>>>>>> origin/main
       }
     ]
   }

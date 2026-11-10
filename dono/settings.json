@@ -3,6 +3,7 @@
   "NomeDoBot": "𝐌𝐢𝐳𝐮𝐤𝐢𝐁𝐨𝐭-𝐌𝐃 ✿",
   "NickDono": "moreno dev </>",
   "numerodono": "5549933805907",
+<<<<<<< HEAD
   "nomecanal": "",
   "newscanal": "",
   "API_KEY_BRONXYS": "",
@@ -12,4 +13,14 @@
   "API_KIMORI_URL": "https://beta-api.orbitalcode.online",
   "APIKEY_KIMORI": "",
   "channelnk": ""
+=======
+  "nomecanal": ".",
+  "newscanal": "000000@g.us",
+  "API_KEY_BRONXYS": "MIYUKI_ULT_26@",
+  "API_KEY_ZERO": "SANDRO_MD_2005",
+  "BronxysSite": "https://api.bronxyshost.com.br",
+  "zerosite": "https://zero-two-apis.store",
+  "API_KIMORI_URL": "https://beta-api.orbitalcode.online",
+  "APIKEY_KIMORI": ""
+>>>>>>> origin/main
 }

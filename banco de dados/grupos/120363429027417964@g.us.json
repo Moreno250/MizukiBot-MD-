@@ -10,7 +10,11 @@
     "antidoc": false,
     "antictt": false,
     "antiloc": false,
+<<<<<<< HEAD
     "antilinkgp": false,
+=======
+    "antilinkgp": true,
+>>>>>>> origin/main
     "antilinkhard": false,
     "antifake": false,
     "Odelete": false,
@@ -78,9 +82,13 @@
     "level": false,
     "bangp": false,
     "nsfw": false,
+<<<<<<< HEAD
     "modoia": false,
     "antiporn": false,
     "antimention": true,
     "antipayment": false
+=======
+    "modoia": false
+>>>>>>> origin/main
   }
 ]

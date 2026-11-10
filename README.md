@@ -6,7 +6,7 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=32&duration=3000&pause=800&color=B084F7&center=true&vCenter=true&width=500&lines=𝐌𝐢𝐳𝐮𝐤𝐢𝐁𝐨𝐭-𝐌𝐃+✿;Baileys+%7C+Node.js+%7C+CJS;%2B950+comandos+e+contando...)](https://git.io/typing-svg)
 
-![Version](https://img.shields.io/badge/vers%C3%A3o-6.0.0--Open--Beta-blueviolet?style=flat-square)
+![Version](https://img.shields.io/badge/vers%C3%A3o-7.0.0--Open--Beta-blueviolet?style=flat-square)
 ![Open Source](https://img.shields.io/badge/Open%20Source-✔-brightgreen?style=flat-square)
 ![Commands](https://img.shields.io/badge/comandos-%2B950-ff69b4?style=flat-square)
 ![Host](https://img.shields.io/badge/host-Termux-2ea44f?style=flat-square)
@@ -56,16 +56,23 @@ pkg install nodejs-lts git ffmpeg -y
 
 ```bash
 git clone https://github.com/Moreno250/MizukiBot-MD-
+<<<<<<< HEAD
+=======
+```
+### 4. entre na pasta do bot
+
+```bash
+>>>>>>> origin/main
 cd MizukiBot-MD
 ```
 
-### 3. Instale os pacotes do bot
+### 5. Instale os pacotes do bot
 
 ```bash
 npm install
 ```
 
-### 4. Configure o bot
+### 6. Configure o bot
 
 Abra `./dono/settings.json` e edite com seus dados:
 

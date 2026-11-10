@@ -393,6 +393,7 @@ return `╎〔  𝐘𝐮𝐦𝐞𝐦𝐢𝐳𝐮𝐤𝐢 夢月  〕
 
 「💜」 𝐁𝐑𝐈𝐍𝐂𝐀𝐃𝐄𝐈𝐑𝐀𝐒 「💜」 
 
+<<<<<<< HEAD
 ┏━━━━•°✧°•| ⊰🪷⊱ |•°✧°•━━━━━┓
 ┃ ⟡𖥔🎭 ${prefix}gay "marca (@)"
 ┃ ⟡𖥔🎭 ${prefix}feio "marca (@)"
@@ -418,6 +419,29 @@ return `╎〔  𝐘𝐮𝐦𝐞𝐦𝐢𝐳𝐮𝐤𝐢 夢月  〕
 ┃ ⟡𖥔🎭 ${prefix}carinho "marca (@)
 ┃ ⟡𖥔🎭 ${prefix}puta "marca (@)
 ┗֘━━━━━•°✧°•| ⊰🪷⊱ |•°✧°•━━━━┛
+=======
+┏═•❀･ﾟ✦*･ﾟ| ⊰🌙⊱ |ﾟ･*✦ﾟ･❀•═┓
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}gay "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}feio "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}corno "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}vesgo "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}bebado "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}gostoso "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}gostosa "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}beijo "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}comer "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}fuder "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}matar "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}tapa "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}chute "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}dogolpe "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}nazista "marca (@)"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}chance (fale algo)
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}casal "dupla"
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}ppp
+┃ ๋ ࣭ ⭑🎭𖦹 ${prefix}ppt
+┗֘═•❀･ﾟ✦*･ﾟ| ⊰🌙⊱ |ﾟ･*✦ﾟ･❀•═┛
+>>>>>>> origin/main
 
 「💜」 𝐑𝐀𝐍𝐊𝐈𝐍𝐆 「💜」 
 
@@ -563,6 +587,7 @@ return `┏━━━ ༺🩵༻ ━━━┓
 ┃ 🩵 • 𝐂𝐎𝐈𝐍𝐒 •【💰】
 ┗━━━ ༺🩵༻ ━━━┛
 ╎
+<<<<<<< HEAD
 ┏━━━━•°✧°•| ⊰🪷⊱ |•°✧°•━━━━━┓
 ┃ ⋆｡˚✧💸𖦹 ${prefix}Sorteiocoins 
 ┃ ⋆｡˚✧💸𖦹 ${prefix}Sortcoins 
@@ -582,6 +607,27 @@ return `┏━━━ ༺🩵༻ ━━━┓
 ┃ ⋆｡˚✧💸𖦹 ${prefix}Rankcoins
 ┃ ⋆｡˚✧💸𖦹 ${prefix}duelo
 ┗֘━━━━━•°✧°•| ⊰🪷⊱ |•°✧°•━━━━┛`;
+=======
+┏═•❀･ﾟ✦*･ﾟ| ⊰🌙⊱ |ﾟ･*✦ﾟ･❀•═┓
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Sorteiocoins 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Sortcoins 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Whatmusic 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Gartic 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Quizfutebol 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Quizanimais 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Anagrama 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Enigma 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Minerar 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Minerarcoins 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Coins
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Estatisticas 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Cassino 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Dadoapostado 
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Slot
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}Rankcoins
+┃ ๋ ࣭ ⭑💲𖦹 ${prefix}duelo
+┗֘═•❀･ﾟ✦*･ﾟ| ⊰🌙⊱ |ﾟ･*✦ﾟ･❀•═┛`;
+>>>>>>> origin/main
 };
 
 exports.menucoins = menucoins;

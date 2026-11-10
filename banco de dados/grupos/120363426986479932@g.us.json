@@ -21,6 +21,7 @@
     "registrarFIGUS": false,
     "soadm": false,
     "rg_aluguel": false,
+<<<<<<< HEAD
     "listanegra": [
       "558182944844",
       "553492096768",
@@ -41,6 +42,13 @@
       "140497205096539@lid",
       null,
       "239796630888606@lid"
+=======
+    "listanegra": [],
+    "advertir": [
+      null,
+      "91805647401117@lid",
+      "140497205096539@lid"
+>>>>>>> origin/main
     ],
     "prefixos": [
       "!"
@@ -81,7 +89,11 @@
       },
       {
         "bemvindo2": true,
+<<<<<<< HEAD
         "legendabv": "bem vindo (a) ao ⏤͟͟͞͞𝘾𝙝𝙖𝙩୨ - ୧𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝐌𝐃 ✿˃ 𖥦 ˂\n\n #numerodele#",
+=======
+        "legendabv": "seja bem vindo ao ⏤͟͟͞͞𝘾𝙝𝙖𝙩୨ - ୧𝑴𝒊𝒛𝒖𝒌𝒊𝑩𝒐𝒕-𝐌𝐃 ✿˃ 𖥦 ˂ \n#numerodele#",
+>>>>>>> origin/main
         "legendasaiu": "#numerodele# – Saiu do grupo: #nomedogp#"
       }
     ],
@@ -111,9 +123,13 @@
       }
     },
     "antimention": true,
+<<<<<<< HEAD
     "isModoCoins": false,
     "modoia": true,
     "antipagamento": true,
     "anticanal": false
+=======
+    "isModoCoins": false
+>>>>>>> origin/main
   }
 ]
