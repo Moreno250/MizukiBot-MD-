@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://i.ibb.co/kgpx5psw/7921fd838252.jpg" width="320" alt="MizukiBot-MD Logo">
+<img src="https://api.orbitalcode.online/api/uploads/486962a4-a704-4be4-8397-c41d27a36508.jpg" width="320" alt="MizukiBot-MD Logo">
 
 <br>
 
@@ -8,7 +8,7 @@
 
 ![Version](https://img.shields.io/badge/vers%C3%A3o-7.0.0--Open--Beta-blueviolet?style=flat-square)
 ![Open Source](https://img.shields.io/badge/Open%20Source-✔-brightgreen?style=flat-square)
-![Commands](https://img.shields.io/badge/comandos-%2B950-ff69b4?style=flat-square)
+![Commands](https://img.shields.io/badge/comandos-%2B967-ff69b4?style=flat-square)
 ![Host](https://img.shields.io/badge/host-Termux-2ea44f?style=flat-square)
 
 Criador: **moreno** — [WhatsApp](https://wa.me/5549933805907)
