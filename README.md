@@ -63,7 +63,7 @@ git clone https://github.com/Moreno250/MizukiBot-MD-
 
 ```bash
 >>>>>>> origin/main
-cd MizukiBot-MD
+cd MizukiBot-MD-
 ```
 
 ### 5. Instale os pacotes do bot
@@ -88,8 +88,7 @@ Abra `./dono/settings.json` e edite com seus dados:
   "API_KEY_ZERO": "SANDRO_MD_2005",
   "BronxysSite": "https://api.bronxyshost.com.br",
   "zerosite": "https://zero-two-apis.store",
-  "API_KIMORI_URL": "https://beta-api.orbitalcode.online",
-  "APIKEY_KIMORI": "Sua-Key"
+  "API_KIMORI_URL": "https://api.orbitalcode.online": "Sua-Key"
 }
 ```
 
@@ -109,7 +108,7 @@ Abra `./dono/settings.json` e edite com seus dados:
 
 #### 🔑 Sobre a Kimori API
 
-Boa parte dos comandos do bot (downloads, buscas, ferramentas, etc.) depende da **Kimori API** (`https://beta-api.orbitalcode.online`) pra funcionar. Ela **não é gratuita** — sem a `APIKEY_KIMORI` preenchida com uma chave válida, esses comandos simplesmente não vão rodar.
+Boa parte dos comandos do bot (downloads, buscas, ferramentas, etc.) depende da **Kimori API** (`https://api.orbitalcode.online`) pra funcionar. Ela **não é gratuita** — sem a `APIKEY_KIMORI` preenchida com uma chave válida, esses comandos simplesmente não vão rodar.
 
 Pra adquirir sua key, chama no WhatsApp: **[+55 38 9116-4328](https://wa.me/553891164328)**
 
