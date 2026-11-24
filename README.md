@@ -11,7 +11,7 @@
 ![Commands](https://img.shields.io/badge/comandos-%2B967-ff69b4?style=flat-square)
 ![Host](https://img.shields.io/badge/host-Termux-2ea44f?style=flat-square)
 
-Criador: **moreno** — [WhatsApp](https://wa.me/5549933805907)
+Criador: **moreno** — [WhatsApp](https://wa.me/5549988878284)
 
 Se o projeto te ajudou de alguma forma, deixa uma ⭐ no repo. Não custa nada pra você e ajuda bastante o projeto a crescer.
 
@@ -139,7 +139,7 @@ Projeto distribuído como **Open Source**. Sinta-se livre para estudar, modifica
 ## 👤 Créditos
 
 **Desenvolvido por:** moreno  
-**WhatsApp:** [+55 49 93380-5907](https://wa.me/5549933805907)
+**WhatsApp:** [+55 49 98887-8284](https://wa.me/5549988878284)
 
 <div align="center">
 
